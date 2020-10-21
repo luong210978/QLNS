@@ -1,0 +1,244 @@
+C:\Users\huutr\Desktop\QLNS-khang\BookStoreClone\bin\Debug\QLNS.mdf
+C:\Users\huutr\Desktop\QLNS-khang\BookStoreClone\bin\Debug\QLNS_log.ldf
+C:\Users\huutr\Desktop\QLNS-khang\BookStoreClone\bin\Debug\ViewModel\QuanLyKhachHangViewModel.cs
+C:\Users\huutr\Desktop\QLNS-khang\BookStoreClone\bin\Debug\BookStoreClone.exe.config
+C:\Users\huutr\Desktop\QLNS-khang\BookStoreClone\bin\Debug\BookStoreClone.exe
+C:\Users\huutr\Desktop\QLNS-khang\BookStoreClone\bin\Debug\BookStoreClone.pdb
+C:\Users\huutr\Desktop\QLNS-khang\BookStoreClone\bin\Debug\EntityFramework.dll
+C:\Users\huutr\Desktop\QLNS-khang\BookStoreClone\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\huutr\Desktop\QLNS-khang\BookStoreClone\bin\Debug\MaterialDesignColors.dll
+C:\Users\huutr\Desktop\QLNS-khang\BookStoreClone\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\huutr\Desktop\QLNS-khang\BookStoreClone\bin\Debug\Microsoft.Expression.Interactions.dll
+C:\Users\huutr\Desktop\QLNS-khang\BookStoreClone\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\huutr\Desktop\QLNS-khang\BookStoreClone\bin\Debug\EntityFramework.xml
+C:\Users\huutr\Desktop\QLNS-khang\BookStoreClone\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\huutr\Desktop\QLNS-khang\BookStoreClone\bin\Debug\MaterialDesignColors.pdb
+C:\Users\huutr\Desktop\QLNS-khang\BookStoreClone\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\huutr\Desktop\QLNS-khang\BookStoreClone\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\huutr\Desktop\QLNS-khang\BookStoreClone\bin\Debug\Microsoft.Expression.Interactions.xml
+C:\Users\huutr\Desktop\QLNS-khang\BookStoreClone\bin\Debug\System.Windows.Interactivity.xml
+C:\Users\huutr\Desktop\QLNS-khang\BookStoreClone\obj\Debug\BookStoreClone.csprojAssemblyReference.cache
+C:\Users\huutr\Desktop\QLNS-khang\BookStoreClone\obj\Debug\View\HoaDonUC.g.cs
+C:\Users\huutr\Desktop\QLNS-khang\BookStoreClone\obj\Debug\View\LoginWindow.g.cs
+C:\Users\huutr\Desktop\QLNS-khang\BookStoreClone\obj\Debug\View\MainWindow.g.cs
+C:\Users\huutr\Desktop\QLNS-khang\BookStoreClone\obj\Debug\View\NhapSachUC.g.cs
+C:\Users\huutr\Desktop\QLNS-khang\BookStoreClone\obj\Debug\View\PhieuThuTienUC.g.cs
+C:\Users\huutr\Desktop\QLNS-khang\BookStoreClone\obj\Debug\View\QuanLyDuLieuSach.g.cs
+C:\Users\huutr\Desktop\QLNS-khang\BookStoreClone\obj\Debug\View\QuanLyHeThongVM.g.cs
+C:\Users\huutr\Desktop\QLNS-khang\BookStoreClone\obj\Debug\View\QuanLyHoaDonUC.g.cs
+C:\Users\huutr\Desktop\QLNS-khang\BookStoreClone\obj\Debug\View\QuanLyKhachHangUC.g.cs
+C:\Users\huutr\Desktop\QLNS-khang\BookStoreClone\obj\Debug\View\QuanLyNhapSachUC.g.cs
+C:\Users\huutr\Desktop\QLNS-khang\BookStoreClone\obj\Debug\View\SachUC.g.cs
+C:\Users\huutr\Desktop\QLNS-khang\BookStoreClone\obj\Debug\View\TimKiemSachUC.g.cs
+C:\Users\huutr\Desktop\QLNS-khang\BookStoreClone\obj\Debug\App.g.cs
+C:\Users\huutr\Desktop\QLNS-khang\BookStoreClone\obj\Debug\BookStoreClone_Content.g.cs
+C:\Users\huutr\Desktop\QLNS-khang\BookStoreClone\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\huutr\Desktop\QLNS-khang\BookStoreClone\obj\Debug\BookStoreClone_MarkupCompile.cache
+C:\Users\huutr\Desktop\QLNS-khang\BookStoreClone\obj\Debug\BookStoreClone_MarkupCompile.lref
+C:\Users\huutr\Desktop\QLNS-khang\BookStoreClone\obj\Debug\App.baml
+C:\Users\huutr\Desktop\QLNS-khang\BookStoreClone\obj\Debug\Resources\MainResource.baml
+C:\Users\huutr\Desktop\QLNS-khang\BookStoreClone\obj\Debug\View\HoaDonUC.baml
+C:\Users\huutr\Desktop\QLNS-khang\BookStoreClone\obj\Debug\View\LoginWindow.baml
+C:\Users\huutr\Desktop\QLNS-khang\BookStoreClone\obj\Debug\View\MainWindow.baml
+C:\Users\huutr\Desktop\QLNS-khang\BookStoreClone\obj\Debug\View\NhapSachUC.baml
+C:\Users\huutr\Desktop\QLNS-khang\BookStoreClone\obj\Debug\View\PhieuThuTienUC.baml
+C:\Users\huutr\Desktop\QLNS-khang\BookStoreClone\obj\Debug\View\QuanLyDuLieuSach.baml
+C:\Users\huutr\Desktop\QLNS-khang\BookStoreClone\obj\Debug\View\QuanLyHeThongVM.baml
+C:\Users\huutr\Desktop\QLNS-khang\BookStoreClone\obj\Debug\View\QuanLyHoaDonUC.baml
+C:\Users\huutr\Desktop\QLNS-khang\BookStoreClone\obj\Debug\View\QuanLyKhachHangUC.baml
+C:\Users\huutr\Desktop\QLNS-khang\BookStoreClone\obj\Debug\View\QuanLyNhapSachUC.baml
+C:\Users\huutr\Desktop\QLNS-khang\BookStoreClone\obj\Debug\View\SachUC.baml
+C:\Users\huutr\Desktop\QLNS-khang\BookStoreClone\obj\Debug\View\TimKiemSachUC.baml
+C:\Users\huutr\Desktop\QLNS-khang\BookStoreClone\obj\Debug\BookStoreClone.g.resources
+C:\Users\huutr\Desktop\QLNS-khang\BookStoreClone\obj\Debug\BookStoreClone.Properties.Resources.resources
+C:\Users\huutr\Desktop\QLNS-khang\BookStoreClone\obj\Debug\BookStoreClone.csproj.GenerateResource.cache
+C:\Users\huutr\Desktop\QLNS-khang\BookStoreClone\obj\Debug\BookStoreClone.csproj.CoreCompileInputs.cache
+C:\Users\huutr\Desktop\QLNS-khang\BookStoreClone\obj\Debug\XamlC.stamp
+C:\Users\huutr\Desktop\QLNS-khang\BookStoreClone\obj\Debug\BookStoreClone.csproj.CopyComplete
+C:\Users\huutr\Desktop\QLNS-khang\BookStoreClone\obj\Debug\BookStoreClone.exe
+C:\Users\huutr\Desktop\QLNS-khang\BookStoreClone\obj\Debug\BookStoreClone.pdb
+C:\Users\huutr\Desktop\QLNS-khang\BookStoreClone\obj\Debug\View\BaoCaoUC.g.cs
+C:\Users\huutr\Desktop\QLNS-khang\BookStoreClone\obj\Debug\View\BaoCaoUC.baml
+C:\Users\NguyễnVănLương\Desktop\qlns\QLNS\BookStoreClone\bin\Debug\QLNS.mdf
+C:\Users\NguyễnVănLương\Desktop\qlns\QLNS\BookStoreClone\bin\Debug\QLNS_log.ldf
+C:\Users\NguyễnVănLương\Desktop\qlns\QLNS\BookStoreClone\bin\Debug\ViewModel\QuanLyKhachHangViewModel.cs
+C:\Users\NguyễnVănLương\Desktop\qlns\QLNS\BookStoreClone\bin\Debug\BookStoreClone.exe.config
+C:\Users\NguyễnVănLương\Desktop\qlns\QLNS\BookStoreClone\bin\Debug\BookStoreClone.exe
+C:\Users\NguyễnVănLương\Desktop\qlns\QLNS\BookStoreClone\bin\Debug\BookStoreClone.pdb
+C:\Users\NguyễnVănLương\Desktop\qlns\QLNS\BookStoreClone\bin\Debug\EntityFramework.dll
+C:\Users\NguyễnVănLương\Desktop\qlns\QLNS\BookStoreClone\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\NguyễnVănLương\Desktop\qlns\QLNS\BookStoreClone\bin\Debug\MaterialDesignColors.dll
+C:\Users\NguyễnVănLương\Desktop\qlns\QLNS\BookStoreClone\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\NguyễnVănLương\Desktop\qlns\QLNS\BookStoreClone\bin\Debug\Microsoft.Expression.Interactions.dll
+C:\Users\NguyễnVănLương\Desktop\qlns\QLNS\BookStoreClone\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\NguyễnVănLương\Desktop\qlns\QLNS\BookStoreClone\bin\Debug\EntityFramework.xml
+C:\Users\NguyễnVănLương\Desktop\qlns\QLNS\BookStoreClone\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\NguyễnVănLương\Desktop\qlns\QLNS\BookStoreClone\bin\Debug\MaterialDesignColors.pdb
+C:\Users\NguyễnVănLương\Desktop\qlns\QLNS\BookStoreClone\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\NguyễnVănLương\Desktop\qlns\QLNS\BookStoreClone\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\NguyễnVănLương\Desktop\qlns\QLNS\BookStoreClone\bin\Debug\Microsoft.Expression.Interactions.xml
+C:\Users\NguyễnVănLương\Desktop\qlns\QLNS\BookStoreClone\bin\Debug\System.Windows.Interactivity.xml
+C:\Users\NguyễnVănLương\Desktop\qlns\QLNS\BookStoreClone\obj\Debug\BookStoreClone.csprojAssemblyReference.cache
+C:\Users\NguyễnVănLương\Desktop\qlns\QLNS\BookStoreClone\obj\Debug\View\BaoCaoUC.g.cs
+C:\Users\NguyễnVănLương\Desktop\qlns\QLNS\BookStoreClone\obj\Debug\View\HoaDonUC.g.cs
+C:\Users\NguyễnVănLương\Desktop\qlns\QLNS\BookStoreClone\obj\Debug\View\LoginWindow.g.cs
+C:\Users\NguyễnVănLương\Desktop\qlns\QLNS\BookStoreClone\obj\Debug\View\MainWindow.g.cs
+C:\Users\NguyễnVănLương\Desktop\qlns\QLNS\BookStoreClone\obj\Debug\View\NhapSachUC.g.cs
+C:\Users\NguyễnVănLương\Desktop\qlns\QLNS\BookStoreClone\obj\Debug\View\PhieuThuTienUC.g.cs
+C:\Users\NguyễnVănLương\Desktop\qlns\QLNS\BookStoreClone\obj\Debug\View\QuanLyDuLieuSach.g.cs
+C:\Users\NguyễnVănLương\Desktop\qlns\QLNS\BookStoreClone\obj\Debug\View\QuanLyHeThongVM.g.cs
+C:\Users\NguyễnVănLương\Desktop\qlns\QLNS\BookStoreClone\obj\Debug\View\QuanLyHoaDonUC.g.cs
+C:\Users\NguyễnVănLương\Desktop\qlns\QLNS\BookStoreClone\obj\Debug\View\QuanLyKhachHangUC.g.cs
+C:\Users\NguyễnVănLương\Desktop\qlns\QLNS\BookStoreClone\obj\Debug\View\QuanLyNhapSachUC.g.cs
+C:\Users\NguyễnVănLương\Desktop\qlns\QLNS\BookStoreClone\obj\Debug\View\SachUC.g.cs
+C:\Users\NguyễnVănLương\Desktop\qlns\QLNS\BookStoreClone\obj\Debug\View\TimKiemSachUC.g.cs
+C:\Users\NguyễnVănLương\Desktop\qlns\QLNS\BookStoreClone\obj\Debug\App.g.cs
+C:\Users\NguyễnVănLương\Desktop\qlns\QLNS\BookStoreClone\obj\Debug\BookStoreClone_Content.g.cs
+C:\Users\NguyễnVănLương\Desktop\qlns\QLNS\BookStoreClone\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\NguyễnVănLương\Desktop\qlns\QLNS\BookStoreClone\obj\Debug\BookStoreClone_MarkupCompile.cache
+C:\Users\NguyễnVănLương\Desktop\qlns\QLNS\BookStoreClone\obj\Debug\BookStoreClone_MarkupCompile.lref
+C:\Users\NguyễnVănLương\Desktop\qlns\QLNS\BookStoreClone\obj\Debug\App.baml
+C:\Users\NguyễnVănLương\Desktop\qlns\QLNS\BookStoreClone\obj\Debug\Resources\MainResource.baml
+C:\Users\NguyễnVănLương\Desktop\qlns\QLNS\BookStoreClone\obj\Debug\View\BaoCaoUC.baml
+C:\Users\NguyễnVănLương\Desktop\qlns\QLNS\BookStoreClone\obj\Debug\View\HoaDonUC.baml
+C:\Users\NguyễnVănLương\Desktop\qlns\QLNS\BookStoreClone\obj\Debug\View\LoginWindow.baml
+C:\Users\NguyễnVănLương\Desktop\qlns\QLNS\BookStoreClone\obj\Debug\View\MainWindow.baml
+C:\Users\NguyễnVănLương\Desktop\qlns\QLNS\BookStoreClone\obj\Debug\View\NhapSachUC.baml
+C:\Users\NguyễnVănLương\Desktop\qlns\QLNS\BookStoreClone\obj\Debug\View\PhieuThuTienUC.baml
+C:\Users\NguyễnVănLương\Desktop\qlns\QLNS\BookStoreClone\obj\Debug\View\QuanLyDuLieuSach.baml
+C:\Users\NguyễnVănLương\Desktop\qlns\QLNS\BookStoreClone\obj\Debug\View\QuanLyHeThongVM.baml
+C:\Users\NguyễnVănLương\Desktop\qlns\QLNS\BookStoreClone\obj\Debug\View\QuanLyHoaDonUC.baml
+C:\Users\NguyễnVănLương\Desktop\qlns\QLNS\BookStoreClone\obj\Debug\View\QuanLyKhachHangUC.baml
+C:\Users\NguyễnVănLương\Desktop\qlns\QLNS\BookStoreClone\obj\Debug\View\QuanLyNhapSachUC.baml
+C:\Users\NguyễnVănLương\Desktop\qlns\QLNS\BookStoreClone\obj\Debug\View\SachUC.baml
+C:\Users\NguyễnVănLương\Desktop\qlns\QLNS\BookStoreClone\obj\Debug\View\TimKiemSachUC.baml
+C:\Users\NguyễnVănLương\Desktop\qlns\QLNS\BookStoreClone\obj\Debug\BookStoreClone.g.resources
+C:\Users\NguyễnVănLương\Desktop\qlns\QLNS\BookStoreClone\obj\Debug\BookStoreClone.Properties.Resources.resources
+C:\Users\NguyễnVănLương\Desktop\qlns\QLNS\BookStoreClone\obj\Debug\BookStoreClone.csproj.GenerateResource.cache
+C:\Users\NguyễnVănLương\Desktop\qlns\QLNS\BookStoreClone\obj\Debug\BookStoreClone.csproj.CoreCompileInputs.cache
+C:\Users\NguyễnVănLương\Desktop\qlns\QLNS\BookStoreClone\obj\Debug\XamlC.stamp
+C:\Users\NguyễnVănLương\Desktop\qlns\QLNS\BookStoreClone\obj\Debug\BookStoreClone.csproj.CopyComplete
+C:\Users\NguyễnVănLương\Desktop\qlns\QLNS\BookStoreClone\obj\Debug\BookStoreClone.exe
+C:\Users\NguyễnVănLương\Desktop\qlns\QLNS\BookStoreClone\obj\Debug\BookStoreClone.pdb
+E:\uit\Quản lí nhà sách\qlns\QLNS\BookStoreClone\bin\Debug\QLNS.mdf
+E:\uit\Quản lí nhà sách\qlns\QLNS\BookStoreClone\bin\Debug\QLNS_log.ldf
+E:\uit\Quản lí nhà sách\qlns\QLNS\BookStoreClone\bin\Debug\ViewModel\QuanLyKhachHangViewModel.cs
+E:\uit\Quản lí nhà sách\qlns\QLNS\BookStoreClone\bin\Debug\BookStoreClone.exe.config
+E:\uit\Quản lí nhà sách\qlns\QLNS\BookStoreClone\bin\Debug\BookStoreClone.exe
+E:\uit\Quản lí nhà sách\qlns\QLNS\BookStoreClone\bin\Debug\BookStoreClone.pdb
+E:\uit\Quản lí nhà sách\qlns\QLNS\BookStoreClone\bin\Debug\EntityFramework.dll
+E:\uit\Quản lí nhà sách\qlns\QLNS\BookStoreClone\bin\Debug\EntityFramework.SqlServer.dll
+E:\uit\Quản lí nhà sách\qlns\QLNS\BookStoreClone\bin\Debug\MaterialDesignColors.dll
+E:\uit\Quản lí nhà sách\qlns\QLNS\BookStoreClone\bin\Debug\MaterialDesignThemes.Wpf.dll
+E:\uit\Quản lí nhà sách\qlns\QLNS\BookStoreClone\bin\Debug\Microsoft.Expression.Interactions.dll
+E:\uit\Quản lí nhà sách\qlns\QLNS\BookStoreClone\bin\Debug\System.Windows.Interactivity.dll
+E:\uit\Quản lí nhà sách\qlns\QLNS\BookStoreClone\bin\Debug\EntityFramework.xml
+E:\uit\Quản lí nhà sách\qlns\QLNS\BookStoreClone\bin\Debug\EntityFramework.SqlServer.xml
+E:\uit\Quản lí nhà sách\qlns\QLNS\BookStoreClone\bin\Debug\MaterialDesignColors.pdb
+E:\uit\Quản lí nhà sách\qlns\QLNS\BookStoreClone\bin\Debug\MaterialDesignThemes.Wpf.pdb
+E:\uit\Quản lí nhà sách\qlns\QLNS\BookStoreClone\bin\Debug\MaterialDesignThemes.Wpf.xml
+E:\uit\Quản lí nhà sách\qlns\QLNS\BookStoreClone\bin\Debug\Microsoft.Expression.Interactions.xml
+E:\uit\Quản lí nhà sách\qlns\QLNS\BookStoreClone\bin\Debug\System.Windows.Interactivity.xml
+E:\uit\Quản lí nhà sách\qlns\QLNS\BookStoreClone\obj\Debug\BookStoreClone.csprojAssemblyReference.cache
+E:\uit\Quản lí nhà sách\qlns\QLNS\BookStoreClone\obj\Debug\View\BaoCaoUC.g.cs
+E:\uit\Quản lí nhà sách\qlns\QLNS\BookStoreClone\obj\Debug\View\HoaDonUC.g.cs
+E:\uit\Quản lí nhà sách\qlns\QLNS\BookStoreClone\obj\Debug\View\LoginWindow.g.cs
+E:\uit\Quản lí nhà sách\qlns\QLNS\BookStoreClone\obj\Debug\View\MainWindow.g.cs
+E:\uit\Quản lí nhà sách\qlns\QLNS\BookStoreClone\obj\Debug\View\NhapSachUC.g.cs
+E:\uit\Quản lí nhà sách\qlns\QLNS\BookStoreClone\obj\Debug\View\PhieuThuTienUC.g.cs
+E:\uit\Quản lí nhà sách\qlns\QLNS\BookStoreClone\obj\Debug\View\QuanLyDuLieuSach.g.cs
+E:\uit\Quản lí nhà sách\qlns\QLNS\BookStoreClone\obj\Debug\View\QuanLyHeThongVM.g.cs
+E:\uit\Quản lí nhà sách\qlns\QLNS\BookStoreClone\obj\Debug\View\QuanLyHoaDonUC.g.cs
+E:\uit\Quản lí nhà sách\qlns\QLNS\BookStoreClone\obj\Debug\View\QuanLyKhachHangUC.g.cs
+E:\uit\Quản lí nhà sách\qlns\QLNS\BookStoreClone\obj\Debug\View\QuanLyNhapSachUC.g.cs
+E:\uit\Quản lí nhà sách\qlns\QLNS\BookStoreClone\obj\Debug\View\SachUC.g.cs
+E:\uit\Quản lí nhà sách\qlns\QLNS\BookStoreClone\obj\Debug\View\TimKiemSachUC.g.cs
+E:\uit\Quản lí nhà sách\qlns\QLNS\BookStoreClone\obj\Debug\App.g.cs
+E:\uit\Quản lí nhà sách\qlns\QLNS\BookStoreClone\obj\Debug\BookStoreClone_Content.g.cs
+E:\uit\Quản lí nhà sách\qlns\QLNS\BookStoreClone\obj\Debug\GeneratedInternalTypeHelper.g.cs
+E:\uit\Quản lí nhà sách\qlns\QLNS\BookStoreClone\obj\Debug\BookStoreClone_MarkupCompile.cache
+E:\uit\Quản lí nhà sách\qlns\QLNS\BookStoreClone\obj\Debug\BookStoreClone_MarkupCompile.lref
+E:\uit\Quản lí nhà sách\qlns\QLNS\BookStoreClone\obj\Debug\App.baml
+E:\uit\Quản lí nhà sách\qlns\QLNS\BookStoreClone\obj\Debug\Resources\MainResource.baml
+E:\uit\Quản lí nhà sách\qlns\QLNS\BookStoreClone\obj\Debug\View\BaoCaoUC.baml
+E:\uit\Quản lí nhà sách\qlns\QLNS\BookStoreClone\obj\Debug\View\HoaDonUC.baml
+E:\uit\Quản lí nhà sách\qlns\QLNS\BookStoreClone\obj\Debug\View\LoginWindow.baml
+E:\uit\Quản lí nhà sách\qlns\QLNS\BookStoreClone\obj\Debug\View\MainWindow.baml
+E:\uit\Quản lí nhà sách\qlns\QLNS\BookStoreClone\obj\Debug\View\NhapSachUC.baml
+E:\uit\Quản lí nhà sách\qlns\QLNS\BookStoreClone\obj\Debug\View\PhieuThuTienUC.baml
+E:\uit\Quản lí nhà sách\qlns\QLNS\BookStoreClone\obj\Debug\View\QuanLyDuLieuSach.baml
+E:\uit\Quản lí nhà sách\qlns\QLNS\BookStoreClone\obj\Debug\View\QuanLyHeThongVM.baml
+E:\uit\Quản lí nhà sách\qlns\QLNS\BookStoreClone\obj\Debug\View\QuanLyHoaDonUC.baml
+E:\uit\Quản lí nhà sách\qlns\QLNS\BookStoreClone\obj\Debug\View\QuanLyKhachHangUC.baml
+E:\uit\Quản lí nhà sách\qlns\QLNS\BookStoreClone\obj\Debug\View\QuanLyNhapSachUC.baml
+E:\uit\Quản lí nhà sách\qlns\QLNS\BookStoreClone\obj\Debug\View\SachUC.baml
+E:\uit\Quản lí nhà sách\qlns\QLNS\BookStoreClone\obj\Debug\View\TimKiemSachUC.baml
+E:\uit\Quản lí nhà sách\qlns\QLNS\BookStoreClone\obj\Debug\BookStoreClone.g.resources
+E:\uit\Quản lí nhà sách\qlns\QLNS\BookStoreClone\obj\Debug\BookStoreClone.Properties.Resources.resources
+E:\uit\Quản lí nhà sách\qlns\QLNS\BookStoreClone\obj\Debug\BookStoreClone.csproj.GenerateResource.cache
+E:\uit\Quản lí nhà sách\qlns\QLNS\BookStoreClone\obj\Debug\BookStoreClone.csproj.CoreCompileInputs.cache
+E:\uit\Quản lí nhà sách\qlns\QLNS\BookStoreClone\obj\Debug\XamlC.stamp
+E:\uit\Quản lí nhà sách\qlns\QLNS\BookStoreClone\obj\Debug\BookStoreClone.csproj.CopyComplete
+E:\uit\Quản lí nhà sách\qlns\QLNS\BookStoreClone\obj\Debug\BookStoreClone.exe
+E:\uit\Quản lí nhà sách\qlns\QLNS\BookStoreClone\obj\Debug\BookStoreClone.pdb
+C:\Users\NguyễnVănLương\Desktop\QLNS\BookStoreClone\bin\Debug\QLNS.mdf
+C:\Users\NguyễnVănLương\Desktop\QLNS\BookStoreClone\bin\Debug\QLNS_log.ldf
+C:\Users\NguyễnVănLương\Desktop\QLNS\BookStoreClone\bin\Debug\ViewModel\QuanLyKhachHangViewModel.cs
+C:\Users\NguyễnVănLương\Desktop\QLNS\BookStoreClone\bin\Debug\BookStoreClone.exe.config
+C:\Users\NguyễnVănLương\Desktop\QLNS\BookStoreClone\bin\Debug\BookStoreClone.exe
+C:\Users\NguyễnVănLương\Desktop\QLNS\BookStoreClone\bin\Debug\BookStoreClone.pdb
+C:\Users\NguyễnVănLương\Desktop\QLNS\BookStoreClone\bin\Debug\EntityFramework.dll
+C:\Users\NguyễnVănLương\Desktop\QLNS\BookStoreClone\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\NguyễnVănLương\Desktop\QLNS\BookStoreClone\bin\Debug\MaterialDesignColors.dll
+C:\Users\NguyễnVănLương\Desktop\QLNS\BookStoreClone\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\NguyễnVănLương\Desktop\QLNS\BookStoreClone\bin\Debug\Microsoft.Expression.Interactions.dll
+C:\Users\NguyễnVănLương\Desktop\QLNS\BookStoreClone\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\NguyễnVănLương\Desktop\QLNS\BookStoreClone\bin\Debug\EntityFramework.xml
+C:\Users\NguyễnVănLương\Desktop\QLNS\BookStoreClone\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\NguyễnVănLương\Desktop\QLNS\BookStoreClone\bin\Debug\MaterialDesignColors.pdb
+C:\Users\NguyễnVănLương\Desktop\QLNS\BookStoreClone\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\NguyễnVănLương\Desktop\QLNS\BookStoreClone\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\NguyễnVănLương\Desktop\QLNS\BookStoreClone\bin\Debug\Microsoft.Expression.Interactions.xml
+C:\Users\NguyễnVănLương\Desktop\QLNS\BookStoreClone\bin\Debug\System.Windows.Interactivity.xml
+C:\Users\NguyễnVănLương\Desktop\QLNS\BookStoreClone\obj\Debug\BookStoreClone.csprojAssemblyReference.cache
+C:\Users\NguyễnVănLương\Desktop\QLNS\BookStoreClone\obj\Debug\View\BaoCaoUC.g.cs
+C:\Users\NguyễnVănLương\Desktop\QLNS\BookStoreClone\obj\Debug\View\HoaDonUC.g.cs
+C:\Users\NguyễnVănLương\Desktop\QLNS\BookStoreClone\obj\Debug\View\LoginWindow.g.cs
+C:\Users\NguyễnVănLương\Desktop\QLNS\BookStoreClone\obj\Debug\View\MainWindow.g.cs
+C:\Users\NguyễnVănLương\Desktop\QLNS\BookStoreClone\obj\Debug\View\NhapSachUC.g.cs
+C:\Users\NguyễnVănLương\Desktop\QLNS\BookStoreClone\obj\Debug\View\PhieuThuTienUC.g.cs
+C:\Users\NguyễnVănLương\Desktop\QLNS\BookStoreClone\obj\Debug\View\QuanLyDuLieuSach.g.cs
+C:\Users\NguyễnVănLương\Desktop\QLNS\BookStoreClone\obj\Debug\View\QuanLyHeThongVM.g.cs
+C:\Users\NguyễnVănLương\Desktop\QLNS\BookStoreClone\obj\Debug\View\QuanLyHoaDonUC.g.cs
+C:\Users\NguyễnVănLương\Desktop\QLNS\BookStoreClone\obj\Debug\View\QuanLyKhachHangUC.g.cs
+C:\Users\NguyễnVănLương\Desktop\QLNS\BookStoreClone\obj\Debug\View\QuanLyNhapSachUC.g.cs
+C:\Users\NguyễnVănLương\Desktop\QLNS\BookStoreClone\obj\Debug\View\SachUC.g.cs
+C:\Users\NguyễnVănLương\Desktop\QLNS\BookStoreClone\obj\Debug\View\TimKiemSachUC.g.cs
+C:\Users\NguyễnVănLương\Desktop\QLNS\BookStoreClone\obj\Debug\App.g.cs
+C:\Users\NguyễnVănLương\Desktop\QLNS\BookStoreClone\obj\Debug\BookStoreClone_Content.g.cs
+C:\Users\NguyễnVănLương\Desktop\QLNS\BookStoreClone\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\NguyễnVănLương\Desktop\QLNS\BookStoreClone\obj\Debug\BookStoreClone_MarkupCompile.cache
+C:\Users\NguyễnVănLương\Desktop\QLNS\BookStoreClone\obj\Debug\BookStoreClone_MarkupCompile.lref
+C:\Users\NguyễnVănLương\Desktop\QLNS\BookStoreClone\obj\Debug\App.baml
+C:\Users\NguyễnVănLương\Desktop\QLNS\BookStoreClone\obj\Debug\Resources\MainResource.baml
+C:\Users\NguyễnVănLương\Desktop\QLNS\BookStoreClone\obj\Debug\View\BaoCaoUC.baml
+C:\Users\NguyễnVănLương\Desktop\QLNS\BookStoreClone\obj\Debug\View\HoaDonUC.baml
+C:\Users\NguyễnVănLương\Desktop\QLNS\BookStoreClone\obj\Debug\View\LoginWindow.baml
+C:\Users\NguyễnVănLương\Desktop\QLNS\BookStoreClone\obj\Debug\View\MainWindow.baml
+C:\Users\NguyễnVănLương\Desktop\QLNS\BookStoreClone\obj\Debug\View\NhapSachUC.baml
+C:\Users\NguyễnVănLương\Desktop\QLNS\BookStoreClone\obj\Debug\View\PhieuThuTienUC.baml
+C:\Users\NguyễnVănLương\Desktop\QLNS\BookStoreClone\obj\Debug\View\QuanLyDuLieuSach.baml
+C:\Users\NguyễnVănLương\Desktop\QLNS\BookStoreClone\obj\Debug\View\QuanLyHeThongVM.baml
+C:\Users\NguyễnVănLương\Desktop\QLNS\BookStoreClone\obj\Debug\View\QuanLyHoaDonUC.baml
+C:\Users\NguyễnVănLương\Desktop\QLNS\BookStoreClone\obj\Debug\View\QuanLyKhachHangUC.baml
+C:\Users\NguyễnVănLương\Desktop\QLNS\BookStoreClone\obj\Debug\View\QuanLyNhapSachUC.baml
+C:\Users\NguyễnVănLương\Desktop\QLNS\BookStoreClone\obj\Debug\View\SachUC.baml
+C:\Users\NguyễnVănLương\Desktop\QLNS\BookStoreClone\obj\Debug\View\TimKiemSachUC.baml
+C:\Users\NguyễnVănLương\Desktop\QLNS\BookStoreClone\obj\Debug\BookStoreClone.g.resources
+C:\Users\NguyễnVănLương\Desktop\QLNS\BookStoreClone\obj\Debug\BookStoreClone.Properties.Resources.resources
+C:\Users\NguyễnVănLương\Desktop\QLNS\BookStoreClone\obj\Debug\BookStoreClone.csproj.GenerateResource.cache
+C:\Users\NguyễnVănLương\Desktop\QLNS\BookStoreClone\obj\Debug\BookStoreClone.csproj.CoreCompileInputs.cache
+C:\Users\NguyễnVănLương\Desktop\QLNS\BookStoreClone\obj\Debug\XamlC.stamp
+C:\Users\NguyễnVănLương\Desktop\QLNS\BookStoreClone\obj\Debug\BookStoreClone.csproj.CopyComplete
+C:\Users\NguyễnVănLương\Desktop\QLNS\BookStoreClone\obj\Debug\BookStoreClone.exe
+C:\Users\NguyễnVănLương\Desktop\QLNS\BookStoreClone\obj\Debug\BookStoreClone.pdb
