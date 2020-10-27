@@ -265,7 +265,7 @@
                         </Grid.ColumnDefinitions>
                         <Button
                             Command="{Binding TimKiemCommand}"
-                            CommandParameter="{Binding ElementName=pnlHienThiSach}"
+                            CommandParameter="{Binding ElementName=pnlHienThiNhanVien}"
                             Style="{DynamicResource MaterialDesignToolButton}">
                             <materialDesign:PackIcon Kind="UserSearch" Opacity=".56" />
                         </Button>
@@ -321,11 +321,11 @@
                                         Width="25"
                                         Height="25"
                                         Margin="5,0,5,0"
-                                        Command="{Binding LoadChiTietSachCommand}"
-                                        CommandParameter="{Binding ElementName=dataSach}"
-                                        DataContext="{StaticResource QuanLyDuLieuSachVM}"
+                                        Command="{Binding LoadChiTietNhanVienCommand}"
+                                        CommandParameter="{Binding ElementName=dataNhanVien}"
+                                        DataContext="{StaticResource QuanLyHeThongVM}"
                                         Style="{StaticResource MaterialDesignFloatingActionMiniButton}"
-                                        ToolTip="Chỉnh sửa sách">
+                                        ToolTip="Chỉnh sửa thông tin nhân viên">
 
                                         <materialDesign:PackIcon
                                             Width="20"
