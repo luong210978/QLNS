@@ -15,7 +15,7 @@
                 Width="30"
                 Height="30"
                 Margin="5,100,5,10"
-                materialDesign:ButtonProgressAssist.IsIndeterminate="{Binding BtnThemHoaDonMoi}"
+                materialDesign:ButtonProgressAssist.IsIndeterminate="{Binding IsVisible, ElementName=pnlThayDoiQuyDinh}"
                 materialDesign:ButtonProgressAssist.IsIndicatorVisible="True"
                 materialDesign:ButtonProgressAssist.Value="-1"
                 Command="{Binding ShowSuaDoiQuyDinhCommand}"
@@ -27,7 +27,7 @@
                 Width="30"
                 Height="30"
                 Margin="5,10,5,10"
-                materialDesign:ButtonProgressAssist.IsIndeterminate="True"
+                materialDesign:ButtonProgressAssist.IsIndeterminate="{Binding IsVisible, ElementName=pnlThemNhanVien}"
                 materialDesign:ButtonProgressAssist.IsIndicatorVisible="True"
                 materialDesign:ButtonProgressAssist.Value="-1"
                 Command="{Binding ShowThemNhanVienCommand}"
@@ -89,6 +89,20 @@
                         TextWrapping="Wrap" />
                     <TextBlock FontSize="15" Margin="5" Text="quyển"></TextBlock>
                 </StackPanel>
+                <StackPanel
+                    Margin="20,5,5,5"
+                    DockPanel.Dock="Top"
+                    Orientation="Horizontal">
+                    <TextBlock FontSize="15" Margin="5" Text="Lợi nhuận khi bán sách: "  />
+                    <TextBox
+                        MaxWidth="320"
+                        MinWidth="100"
+                        FontSize="15"
+                        BorderBrush="Black"
+                        Text="{Binding HeSoDonGia, UpdateSourceTrigger=PropertyChanged}" 
+                        TextWrapping="Wrap" />
+                    <TextBlock FontSize="15" Margin="5" Text="%"></TextBlock>
+                </StackPanel>
                 <StackPanel Margin="20,5,5,5"
                             DockPanel.Dock="Top"
                             Orientation="Horizontal">
@@ -102,12 +116,14 @@
                 </StackPanel>
                 <Button
                     x:Name="btnLuuHoaDon"
-                    Width="130"
-                    Margin="0,10,0,0"
+                    materialDesign:ButtonProgressAssist.Value="-1"
                     Command="{Binding  CapNhatQuyDinhCommand}"
-                    DockPanel.Dock="Right"
-                    Style="{StaticResource MaterialDesignRaisedDarkButton}"
-                    ToolTip="Resource name: MaterialDesignRaisedLightDarkButton">
+                    DockPanel.Dock="Top"
+                    Margin="40,0"
+                    Style="{StaticResource MaterialDesignRaisedButton}"
+                    materialDesign:ButtonProgressAssist.IsIndicatorVisible="True"
+                    materialDesign:ButtonProgressAssist.IsIndeterminate="True"
+                    ToolTip="Cập nhật quy định">
                     Cập nhật
                 </Button>
             </DockPanel>
@@ -127,7 +143,7 @@
                                              Margin="10,6,10,0" />
                     <TextBlock
                         FontSize="24"
-                        Text="Thêm Nhân Viên"  Margin="10,6,10,0" />
+                        Text="{Binding Labelnhanvien}"  Margin="10,6,10,0" />
                 </StackPanel>
 
                 <StackPanel
@@ -230,7 +246,7 @@
                     <materialDesign:PackIcon Kind="LockQuestion"   Height="24"  Width="24"
                                              Margin="10,6,10,0"   />
 
-                    <TextBox FontSize="15"  BorderBrush="Black"  Text="{Binding SelectedNhanVien.MatKhau,Mode=TwoWay}" Width="200"  materialDesign:HintAssist.Hint="Mật Khẩu" />
+                    <TextBox FontSize="15"  BorderBrush="Black"  Text="{Binding SelectedNhanVien.MatKhau,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Width="200"  materialDesign:HintAssist.Hint="Mật Khẩu" />
                 </StackPanel>
                 <Button
                     DockPanel.Dock="Top"
@@ -241,7 +257,8 @@
                     materialDesign:ButtonProgressAssist.IsIndicatorVisible="True"
                     materialDesign:ButtonProgressAssist.IsIndeterminate="True"
                     Content="Cập Nhật"
-                    Margin="40,0" />
+                    Margin="40,0"
+                    ToolTip="Cập Thông tin nhân viên"/>
             </DockPanel>
         </materialDesign:Card>
         <!--Quản lí nhân viên-->

@@ -54,7 +54,8 @@ namespace BookStoreClone.ViewModel
 
 		int _TongSoTienNhapSach;
 		public int TongSoTienNhapSach { get => _TongSoTienNhapSach; set { _TongSoTienNhapSach = value; OnPropertyChanged(); } }
-
+		int _TongSoSach;
+		public int TongSoSach { get => _TongSoSach; set { _TongSoSach = value; OnPropertyChanged(); } }
 
 		DateTime selectedDateTime;
 		public DateTime SelectedDateTime { get => selectedDateTime; set { selectedDateTime = value; OnPropertyChanged(); } }
@@ -90,6 +91,7 @@ namespace BookStoreClone.ViewModel
 
 		void CaiDatGiaoDien(int i)
 		{
+			User = DataProvider.Ins.DB.NguoiDungs.Where(x => x.TenDangNhap == Const.IDNguoiDung).First();
 			if (i == 0)
 			{
 				IsBtnTaoMoi = false;
@@ -149,7 +151,6 @@ namespace BookStoreClone.ViewModel
 					ListCTPhieuNhap.Add(new CTPhieuNhap() { Sach = p, DonGiaNhap = 100000, SoLuongNhap = Const.QuyDinh_SoLuongSachNhapToiThieu }
 					);
 					CapNhatTongSoTienNhap();
-
 				}
 		   );
 			XoaSachDaChonCommand = new RelayCommand<CTPhieuNhap>((p) => { return true; }, (p) => { ListCTPhieuNhap.Remove(p); CapNhatTongSoTienNhap(); });
@@ -164,7 +165,7 @@ namespace BookStoreClone.ViewModel
 				return true;
 			}, (p) => {
 
-				PhieuNhap phieuNhap = new PhieuNhap() { NguoiDung = User, CTPhieuNhaps = new ObservableCollection<CTPhieuNhap>(ListCTPhieuNhap), NgayNhap = selectedDateTime };
+				PhieuNhap phieuNhap = new PhieuNhap() {GiaTriPhieuNhap=TongSoTienNhapSach,TongSoSachNhap=TongSoSach, NguoiDung = User, CTPhieuNhaps = new ObservableCollection<CTPhieuNhap>(ListCTPhieuNhap), NgayNhap = selectedDateTime };
 				DataProvider.Ins.DB.Database.ExecuteSqlCommand("SET IDENTITY_INSERT [dbo].[PhieuNhap] ON");
 				DataProvider.Ins.DB.PhieuNhaps.Add(phieuNhap);
 				DataProvider.Ins.DB.Database.ExecuteSqlCommand("SET IDENTITY_INSERT [dbo].[PhieuNhap] OFF");
@@ -212,11 +213,13 @@ namespace BookStoreClone.ViewModel
 		void CapNhatTongSoTienNhap()
 		{
 			TongSoTienNhapSach = 0;
+			TongSoSach=0;
 			try
 			{
 				TongSoTienNhapSach = ListCTPhieuNhap.Sum(x => x.DonGiaNhap * x.SoLuongNhap);
+				TongSoSach = ListCTPhieuNhap.Sum(x => x.SoLuongNhap);
 			}
-			catch { TongSoTienNhapSach = 999999999; }
+			catch { TongSoTienNhapSach = 999999999;TongSoSach = 0; }
 		}
 
 		void ReserTaoMoiHoaDon()

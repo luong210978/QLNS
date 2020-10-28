@@ -107,8 +107,11 @@
 					case "Tác giả" :
 
 						b = DataProvider.Ins.DB.TacGias.Where(x => x.TenTG.Contains(TextTimKiem)).ToList();
-						MaxTrang = b.Count % SoLuongHienThi == 0 ? b.Count / SoLuongHienThi : b.Count / SoLuongHienThi + 1;
-						LoadSachTu(0, SoLuongHienThi - 1 < b.Count ? SoLuongHienThi - 1 : b.Count - 1, wrapPanel);
+						a.Clear();
+						for(int j=0; j < b.Count; j++)
+						{ a.AddRange(b[j].Saches); }
+						MaxTrang = a.Count % SoLuongHienThi == 0 ? a.Count / SoLuongHienThi : a.Count / SoLuongHienThi + 1;
+						LoadSachTu(0, SoLuongHienThi - 1 < a.Count ? SoLuongHienThi - 1 : a.Count - 1, wrapPanel);
 						break;
 				}
 			}

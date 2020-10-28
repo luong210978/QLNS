@@ -69,8 +69,8 @@ namespace BookStoreClone.ViewModel
         public bool Admin { get => _admin; set { _admin = value; OnPropertyChanged(); } }
         public bool QuanLyKho { get => _quanLyKho; set { _quanLyKho = value; OnPropertyChanged(); } }
         public bool CNV { get => _cNV; set { _cNV = value; OnPropertyChanged(); } }
-
-
+        private int _HeSoDonGia; 
+        public int HeSoDonGia { get => _HeSoDonGia; set { _HeSoDonGia = value; OnPropertyChanged(); } }
         public int TienNoToiDa { get => _tienNoToiDa; set { _tienNoToiDa = value; OnPropertyChanged(); } }
 
         public int SoLuongSachTonToiThieuDeNhap { get => _soLuongSachTonToiThieuDeNhap; set { _soLuongSachTonToiThieuDeNhap = value; OnPropertyChanged(); } }
@@ -78,9 +78,9 @@ namespace BookStoreClone.ViewModel
         public int SoLuongSachTonToiThieuSauKhiBan { get => _soLuongSachTonToiThieuSauKhiBan; set { _soLuongSachTonToiThieuSauKhiBan = value; OnPropertyChanged(); } }
 
         public string TextTimKiemNhanVien { get => _textTimKiemNhanVien; set { _textTimKiemNhanVien = value; OnPropertyChanged(); TimKiemNhanVien(); } }
-
+        private string _Labelnhanvien;
         public bool SetTaiKhoan { get => _setTaiKhoan; set { _setTaiKhoan = value; OnPropertyChanged(); } }
-
+        public string Labelnhanvien { get => _Labelnhanvien; set { _Labelnhanvien = value; OnPropertyChanged(); } }
         public QuanLyHeThongViewModel()
         {
             SelectedQuyDinh = new QuyDinh();
@@ -91,8 +91,7 @@ namespace BookStoreClone.ViewModel
             SelectedQuyDinh.SoLuongSachTonToiThieuDeNhap = SelectedQuyDinh.SoLuongSachTonToiThieuDeNhap;
             SoLuongSachTonToiThieuSauKhiBan = SelectedQuyDinh.SoLuongSachTonToiThieuSauKhiBan;
             TienNoToiDa = SelectedQuyDinh.TienNoToiDa;
-
-
+            HeSoDonGia = Const.QuyDinh_HeSoDonGia;
             if (SelectedQuyDinh.DuocThuVuotSoTienKhachHangDangNo == true)
             {
                 CheckCo = true;
@@ -131,7 +130,8 @@ namespace BookStoreClone.ViewModel
                 {
                     n = 1;
                     XulyHien(1);
-                    p.IsEnabled = false;
+                    Labelnhanvien = "Thêm Nhân Viên";
+                    //p.IsEnabled = false;
                     log = 1;
                     SelectedNhanVien = new NguoiDung();
                     SelectedNhanVien.NgaySinh = DateTime.Today;
@@ -222,15 +222,16 @@ namespace BookStoreClone.ViewModel
                     MessageBox.Show("Bạn chưa nhập đủ thông tin!", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
             });
+            
             LoadChiTietNhanVienCommand = new RelayCommand<DataGrid>((p) => { return true; }, (p) =>
             {
                 log = 0;
                 XulyHien(1);
-                SelectedNhanVien.MatKhau = "";
                 SelectedNhanVien = p.SelectedItem as NguoiDung;
-
+                Labelnhanvien = "Chỉnh Sửa Thông Tin Nhân Viên";
+                SelectedNhanVien.MatKhau = "";
                 n = 1;
-                p.IsEnabled = false;
+                //p.IsEnabled = false;
                 SetTaiKhoan = false;
                 if (SelectedNhanVien.GioiTinh == true)
                 {
@@ -255,6 +256,7 @@ namespace BookStoreClone.ViewModel
                 SelectedQuyDinh.SoLuongSachNhapToiThieu = SoLuongSachNhapToiThieu;
                 SelectedQuyDinh.TienNoToiDa = TienNoToiDa;
                 SelectedQuyDinh.NgayCapNhat = DateTime.Now;
+                Const.QuyDinh_HeSoDonGia = HeSoDonGia;
                 DataProvider.Ins.DB.Database.ExecuteSqlCommand("SET IDENTITY_INSERT [dbo].[QuyDinh] ON");
                 DataProvider.Ins.DB.QuyDinhs.Add(SelectedQuyDinh);
                 DataProvider.Ins.DB.Database.ExecuteSqlCommand("SET IDENTITY_INSERT[dbo].[QuyDinh] OFF");
@@ -309,5 +311,8 @@ namespace BookStoreClone.ViewModel
                 ListNV = new ObservableCollection<NguoiDung>(DataProvider.Ins.DB.NguoiDungs.Where(x => x.TenND.ToLower().Contains(TextTimKiemNhanVien.ToLower()) || x.SDT.Contains(TextTimKiemNhanVien)));
 
         }
+       
     }
+    
+    
 }

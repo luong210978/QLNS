@@ -363,34 +363,37 @@
                         FontSize="15">
                         ----------Nhân viên-------------
                         </TextBlock>
+                        
                         <StackPanel
                         Margin="20,5,5,5"
                         DockPanel.Dock="Top"
+
                         Orientation="Horizontal">
                             <TextBlock FontSize="15" Text="ID nhân viên: " />
                             <TextBlock FontSize="15" Text="{Binding User.TenDangNhap}" />
-                        </StackPanel>
-                        <StackPanel
+                            </StackPanel>
+                            <StackPanel
                         Margin="20,5,5,5"
                         DockPanel.Dock="Top"
                         Orientation="Horizontal">
-                            <TextBlock FontSize="15" Text="Tên nhân viên: " />
-                            <TextBlock FontSize="15" Text="{Binding User.TenND}" />
-                        </StackPanel>
-                        <StackPanel
+                                <TextBlock FontSize="15" Text="Tên nhân viên: " />
+                                <TextBlock FontSize="15" Text="{Binding User.TenND}" />
+                            </StackPanel>
+                            <StackPanel
                         Margin="20,5,5,5"
                         DockPanel.Dock="Top"
                         Orientation="Horizontal">
-                            <TextBlock FontSize="15" Text="SDT nhân viên: " />
-                            <TextBlock FontSize="15" Text="{Binding User.SDT}" />
-                        </StackPanel>
-                        <StackPanel
+                                <TextBlock FontSize="15" Text="SDT nhân viên: " />
+                                <TextBlock FontSize="15" Text="{Binding User.SDT}" />
+                            </StackPanel>
+                            <StackPanel
                         Margin="20,5,5,5"
                         DockPanel.Dock="Top"
                         Orientation="Horizontal">
-                            <TextBlock FontSize="15" Text="Địa chỉ nhân viên: " />
-                            <TextBlock FontSize="15" MaxWidth="280" TextWrapping="Wrap" Text="{Binding User.DiaChi}" />
-                        </StackPanel>
+                                <TextBlock FontSize="15" Text="Địa chỉ nhân viên: " />
+                                <TextBlock FontSize="15" MaxWidth="280" TextWrapping="Wrap" Text="{Binding User.DiaChi}" />
+                            </StackPanel>
+                        
 
                         <Grid DockPanel.Dock="Top">
 
