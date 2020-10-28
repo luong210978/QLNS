@@ -25,8 +25,6 @@ public partial class BaoCaoCongNo
         this.CTBaoCaoCongNoes = new HashSet<CTBaoCaoCongNo>();
 
     }
-
-
     public int MaBaoCao { get; set; }
 
     public int Thang { get; set; }

@@ -328,7 +328,7 @@
                 </DockPanel>
             </DockPanel>
         </materialDesign:Card>
-        <ScrollViewer DockPanel.Dock="Right">
+        <ScrollViewer DockPanel.Dock="Right" >
             <materialDesign:Card
             Visibility="{Binding VisibilityXemChiTiet}"
             Width="426"
@@ -363,16 +363,17 @@
                         FontSize="15">
                         ----------Nhân viên-------------
                         </TextBlock>
-                        
+                        <StackPanel DockPanel.Dock="Top">
                         <StackPanel
                         Margin="20,5,5,5"
                         DockPanel.Dock="Top"
 
                         Orientation="Horizontal">
                             <TextBlock FontSize="15" Text="ID nhân viên: " />
-                            <TextBlock FontSize="15" Text="{Binding User.TenDangNhap}" />
+                                <TextBlock FontSize="15" Text="{Binding  User.TenDangNhap}" />
                             </StackPanel>
-                            <StackPanel
+                            
+                            <StackPanel 
                         Margin="20,5,5,5"
                         DockPanel.Dock="Top"
                         Orientation="Horizontal">
@@ -386,6 +387,7 @@
                                 <TextBlock FontSize="15" Text="SDT nhân viên: " />
                                 <TextBlock FontSize="15" Text="{Binding User.SDT}" />
                             </StackPanel>
+
                             <StackPanel
                         Margin="20,5,5,5"
                         DockPanel.Dock="Top"
@@ -393,8 +395,7 @@
                                 <TextBlock FontSize="15" Text="Địa chỉ nhân viên: " />
                                 <TextBlock FontSize="15" MaxWidth="280" TextWrapping="Wrap" Text="{Binding User.DiaChi}" />
                             </StackPanel>
-                        
-
+                        </StackPanel>
                         <Grid DockPanel.Dock="Top">
 
                             <TextBlock
@@ -420,6 +421,7 @@
                         HeadersVisibility="All"
                         HorizontalScrollBarVisibility="Disabled"
                         IsReadOnly="True"
+                           
                         ItemsSource="{Binding SelectedItem.CTPhieuNhaps, ElementName=dataPhieuNhap}"
                         SelectionMode="Single">
 

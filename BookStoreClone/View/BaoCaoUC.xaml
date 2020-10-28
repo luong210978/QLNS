@@ -10,33 +10,35 @@
             DataContext="{StaticResource BaoCaoVM}"
              d:DesignHeight="800" d:DesignWidth="1300">
     <DockPanel>
-        <WrapPanel Margin="5" Orientation="Vertical" DockPanel.Dock="Right">
-            <Button
-                Width="30"
-                Height="30"
-                Margin="5,100,5,10"
-                materialDesign:ButtonProgressAssist.IsIndeterminate="{Binding BtnThemHoaDonMoi}"
+        <WrapPanel Margin="5" Orientation="Horizontal" DockPanel.Dock="Top">
+            <Button 
+                Width="60"
+                Height="60"     
+                Margin="5,10,5,10"
+                materialDesign:ButtonProgressAssist.IsIndeterminate="{Binding IsVisible, ElementName=pnlBaoCaoCongNo}"
                 materialDesign:ButtonProgressAssist.IsIndicatorVisible="True"
                 materialDesign:ButtonProgressAssist.Value="-1"
+               
                 Command="{Binding ShowBCCongNoCommand}"
                 CommandParameter="{Binding ElementName=pnlBaoCao}"
-                Content="{materialDesign:PackIcon Kind=CreditCardMinusOutline}"
+                Content="{materialDesign:PackIcon Kind=People}"
                 Style="{StaticResource MaterialDesignFloatingActionButton}"
                 ToolTip="Báo Cáo Nợ"
                 ToolTipService.Placement="Right" />
             <Button
-                Width="30"
-                Height="30"
+                Width="60"
+                Height="60"
                 Margin="5,10,5,10"
-                materialDesign:ButtonProgressAssist.IsIndeterminate="True"
+                VerticalAlignment="Center"
+                materialDesign:ButtonProgressAssist.IsIndeterminate="{Binding IsVisible, ElementName=pnlBaoCaoTon}"
                 materialDesign:ButtonProgressAssist.IsIndicatorVisible="True"
                 materialDesign:ButtonProgressAssist.Value="-1"
                 Command="{Binding ShowBCTonCommand}"
                 CommandParameter="{Binding ElementName=pnlBaoCao}"
-                Content="{materialDesign:PackIcon Kind=PeopleAdd}"
+                Content="{materialDesign:PackIcon Kind=BookAccount}"
                 Style="{StaticResource MaterialDesignFloatingActionButton}"
                 ToolTip="Báo Cáo Tồn"
-                ToolTipService.Placement="Right" />
+                ToolTipService.Placement="Right" Click="Button_Click" />
         </WrapPanel>
         <!--Baó Cáo Công Nợ -->
         <materialDesign:Card Margin="5"

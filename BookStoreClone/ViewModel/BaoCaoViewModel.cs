@@ -94,6 +94,11 @@ namespace BookStoreClone.ViewModel
                      {
                          ListCTBaoCaoCongNo = new ObservableCollection<CTBaoCaoCongNo>(DataProvider.Ins.DB.CTBaoCaoCongNoes.Where(x => x.BaoCaoCongNo.Thang == Thang && x.BaoCaoCongNo.Nam == Nam));
                          ListCTBaoCaoTon = new ObservableCollection<CTBaoCaoTon>(DataProvider.Ins.DB.CTBaoCaoTons.Where(x => x.BaoCaoTon.Nam == Nam && x.BaoCaoTon.Thang == Thang));
+                         
+                         BaoCaoCongNo baoCaoCongNo = new BaoCaoCongNo() { Thang =i, Nam = , NguoiDung = U};
+                         DataProvider.Ins.DB.Database.ExecuteSqlCommand("SET IDENTITY_INSERT [dbo].[PhieuNhap] ON");
+                         DataProvider.Ins.DB.PhieuNhaps.Add(phieuNhap);
+                         DataProvider.Ins.DB.Database.ExecuteSqlCommand("SET IDENTITY_INSERT [dbo].[PhieuNhap] OFF");
                          _listHD = new ObservableCollection<HoaDon>(DataProvider.Ins.DB.HoaDons.Where(x => x.NgayBan.Value.Month == Thang && x.NgayBan.Value.Year == Nam));
                          _listPTT = new ObservableCollection<PhieuThuTien>(DataProvider.Ins.DB.PhieuThuTiens.Where(x => x.NgayThuTien.Value.Month == Thang && x.NgayThuTien.Value.Year == Nam));
                          _listCTHD = new ObservableCollection<CTHD>(DataProvider.Ins.DB.CTHDs.Where(x => x.HoaDon.NgayBan.Value.Month == Thang && x.HoaDon.NgayBan.Value.Year == Nam));
