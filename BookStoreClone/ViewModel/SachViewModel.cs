@@ -8,7 +8,7 @@ namespace BookStoreClone.ViewModel
 {
     internal class SachViewModel : BaseViewModel
     {
-        public ICommand HienThoThongTinSachCommand { get; set; }
+        public ICommand HienThiThongTinSachCommand { get; set; }
         public ICommand MouseEnterCommand { get; set; }
         public ICommand MouseLeaveCommand { get; set; }
         public ShadowDepth ShadowDepthA { get => shadowDepth; set { shadowDepth = value; OnPropertyChanged(); } }
@@ -16,7 +16,7 @@ namespace BookStoreClone.ViewModel
 
         public SachViewModel()
         {
-            HienThoThongTinSachCommand = new ViewModel.RelayCommand<TextBlock>((p) => { return true; }, (p) =>
+            HienThiThongTinSachCommand = new ViewModel.RelayCommand<TextBlock>((p) => { return true; }, (p) =>
             {
                 OnPropertyChanged();
                 FrameworkElement frameworkElement = p;

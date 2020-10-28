@@ -8,7 +8,6 @@ namespace BookStoreClone
 
         private Program()
         {
-            //noteaa
         }
 
         private void Creater()

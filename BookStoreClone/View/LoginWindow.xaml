@@ -13,27 +13,48 @@
         x:Name="Loginwd"
         DataContext="{StaticResource LoginVM}"
         Title="LoginWindow" Height="524" Width="360">
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="41*"/>
-            <ColumnDefinition Width="47*"/>
-        </Grid.ColumnDefinitions>
-        <materialDesign:Card Background="Gray" Grid.ColumnSpan="2">
-            <Grid>
-                <materialDesign:Flipper Style="{StaticResource MaterialDesignCardFlipper}" HorizontalAlignment="Left" Width="360" AutomationProperties.Name="loginwd" Height="524" VerticalAlignment="Top">
-                    <materialDesign:Flipper.Background>
-                        <ImageBrush/>
-                    </materialDesign:Flipper.Background>
-                    <materialDesign:Flipper.FrontContent>
-                        <StackPanel
+    <materialDesign:Card Background="Gray" Grid.ColumnSpan="2">
+            <materialDesign:Flipper Style="{StaticResource MaterialDesignCardFlipper}" HorizontalAlignment="Left" Width="360" AutomationProperties.Name="loginwd" Height="524" VerticalAlignment="Top" Margin="0">
+                <materialDesign:Flipper.Background>
+                    <ImageBrush/>
+                </materialDesign:Flipper.Background>
+                <materialDesign:Flipper.FrontContent>
+                    <StackPanel
                         Width="350"
-                        Height="600"
+                        Height="524"          
                         Background="#263228">
-                            <Image Height="260" />
-                            <TextBox
+
+                    <materialDesign:PackIcon 
+                        Kind="BookMinus" 
+                        VerticalAlignment="Center"
+                        Height="250"
+                        Width="260"
+                        HorizontalAlignment="Center"
+                        />
+
+                    <!--<Image 
+                        Source ="/thuvienlogindemo;component/Resources/Images/2b48b29abd18febe3b1f92a85913ce39-simple-book-icon.png"
+                        IsEnabled="True"
+                        Height="260"
+                        Width="260"
+                        
+                    />-->
+                        <Image Height="10">
+
+                        </Image>
+                        <TextBlock
+                    Text="Đăng nhập vào thư viện"
+                        FontSize="20"
+                         HorizontalAlignment="Center"
+                    />
+                        <Image Height="10">
+
+                        </Image>
+                        <TextBox
                             Width="250"
                             Height="45"
-                            Margin="10"
+                            Margin="0"
+                            
                             VerticalAlignment="Center"
                             materialDesign:HintAssist.Hint="Tên đăng nhập"
                             materialDesign:TextFieldAssist.UnderlineBrush="White"
@@ -43,7 +64,7 @@
                             Style="{StaticResource MaterialDesignFloatingHintTextBox}"
                            />
 
-                            <PasswordBox
+                        <PasswordBox
                                 
                             x:Name="pbMatKhau"
                             Width="250"
@@ -54,21 +75,21 @@
                             materialDesign:TextFieldAssist.UnderlineBrush="White"
                             Foreground="White"
                             Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" >
-                                <i:Interaction.Triggers>
-                                    <i:EventTrigger EventName="PasswordChanged">
-                                        <i:InvokeCommandAction Command="{Binding PasswordChangedCommand}" CommandParameter="{Binding ElementName=pbMatKhau}" />
-                                    </i:EventTrigger>
-                                </i:Interaction.Triggers>
-                            </PasswordBox>
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="PasswordChanged">
+                                    <i:InvokeCommandAction Command="{Binding PasswordChangedCommand}" CommandParameter="{Binding ElementName=pbMatKhau}" />
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+                        </PasswordBox>
 
-                            <Button
+                        <Button
                             Margin="5"
                             HorizontalAlignment="Right"
                             Background="Transparent"
                             BorderBrush="Transparent"
                             Command="{Binding BoQuaDangNhapCommand}"
                             CommandParameter="{Binding ElementName=Loginwd}" Content="Bỏ qua đăng nhập"/>
-                            <Button
+                        <Button
                             Width="250"
                             Height="50"
                             Margin="10"
@@ -77,95 +98,16 @@
                             CommandParameter="{Binding ElementName=Loginwd}"
                             Style="{StaticResource MaterialDesignRaisedDarkButton}"
                            >
-                                <TextBlock Text="Đăng nhập" />
-                            </Button>
+                            <TextBlock Text="Đăng nhập" />
+                        </Button>
 
-                        </StackPanel>
-                    </materialDesign:Flipper.FrontContent>
-                    <materialDesign:Flipper.BackContent>
-                        <StackPanel
-                        Width="350"
-                        Height="600"
-                        Background="#263228">
-                            <Image x:Name="pnlDangKy" Height="170" />
-                            <TextBox
-                            Width="250"
-                            Height="45"
-                            Margin="3"
-                            VerticalAlignment="Center"
-                            materialDesign:HintAssist.Hint="Tên đăng nhập"
-                            materialDesign:TextFieldAssist.UnderlineBrush="White"
-                            Foreground="White"
-                            Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
-                            <TextBox
-                            Width="250"
-                            Height="45"
-                            Margin="3"
-                            VerticalAlignment="Center"
-                            materialDesign:HintAssist.Hint="Số điện thoại"
-                            materialDesign:TextFieldAssist.UnderlineBrush="White"
-                            Foreground="White"
-                            Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
-                            <TextBox
-                            Width="250"
-                            Height="45"
-                            Margin="3"
-                            VerticalAlignment="Center"
-                            materialDesign:HintAssist.Hint="Emaill"
-                            materialDesign:TextFieldAssist.UnderlineBrush="White"
-                            Foreground="White"
-                            Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
-                            <PasswordBox
-                            Width="250"
-                            Height="45"
-                            Margin="10"
-                            materialDesign:HintAssist.Foreground="Green"
-                            materialDesign:HintAssist.Hint="Mật khẩu"
-                            materialDesign:TextFieldAssist.UnderlineBrush="White"
-                            Foreground="White"
-                            Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" />
-                            <PasswordBox
-                            Width="250"
-                            Height="45"
-                            Margin="10"
-                            materialDesign:HintAssist.Foreground="Green"
-                            materialDesign:HintAssist.Hint="Xác nhận mật khẩu"
-                            materialDesign:TextFieldAssist.UnderlineBrush="White"
-                            Foreground="White"
-                            Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" />
-                            <Button
-                            Width="250"
-                            Height="50"
-                            Margin="10,10,10,0"
-                            materialDesign:ButtonAssist.CornerRadius="25"
-                            Style="{StaticResource MaterialDesignRaisedAccentButton}"
-                            ToolTip="MaterialDesignRaisedDarkButton with Round Corners">
-                                <TextBlock Text="Đăng ký" RenderTransformOrigin="0.5,0.5" />
-                            </Button>
-                            <Canvas>
-                                <TextBlock
-                                Canvas.Left="83"
-                                Canvas.Top="13"
-                                Foreground="White"><Run Text="Đã có tài khoản?"/></TextBlock>
-                                <Button
-                                Canvas.Left="171"
-                                Canvas.Top="4"
-                                Width="104"
-                                HorizontalAlignment="Right"
-                                Background="Transparent"
-                                BorderBrush="Transparent"
-                                Command="{x:Static materialDesign:Flipper.FlipCommand}"
-                                Foreground="White">
-                                    <TextBlock><Run Text="Đăng nhập" /></TextBlock>
-                                </Button>
-                            </Canvas>
-                        </StackPanel>
-                    </materialDesign:Flipper.BackContent>
-                    <materialDesign:Flipper.DataContext>
-                        <ViewModel:LoginViewModel/>
-                    </materialDesign:Flipper.DataContext>
-                </materialDesign:Flipper>
-            </Grid>
+                    </StackPanel>
+
+                </materialDesign:Flipper.FrontContent>
+
+            </materialDesign:Flipper>
+
         </materialDesign:Card>
-    </Grid>
+
+
 </Window>

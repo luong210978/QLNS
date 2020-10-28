@@ -22,7 +22,7 @@
                     Command="{Binding ShowTaoHoaDonMoiCommand}"
                     Content="{materialDesign:PackIcon Kind=PlusCircle}"
                     Style="{StaticResource MaterialDesignFloatingActionButton}"
-                    ToolTip="Thêm khách hàng"
+                    ToolTip="Tạo phiếu nhập sách"
                     ToolTipService.Placement="Right" />
         </WrapPanel>
         <materialDesign:Card
@@ -114,7 +114,7 @@
                                                 CommandParameter="{Binding ElementName=dataSach, Path=SelectedItem}"
 
                                                 Style="{StaticResource MaterialDesignFloatingActionMiniButton}"
-                                                ToolTip="Chỉnh sửa sách">
+                                                ToolTip="Nhập sách">
 
                                                 <materialDesign:PackIcon
                                                     Width="20"
@@ -254,7 +254,7 @@
                                     CommandParameter="{Binding ElementName=btnNhapKho}"
                                     DockPanel.Dock="Right"
                                     Style="{StaticResource MaterialDesignRaisedDarkButton}"
-                                    ToolTip="Resource name: MaterialDesignRaisedLightDarkButton">
+                                    ToolTip="Lưu phiếu nhập sách">
                                     Nhập kho
                                 </Button>
                                 <StackPanel />

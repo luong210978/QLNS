@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\Git\QLNS\BookStoreClone\obj\Debug\
+E:\uit\Quản lí nhà sách\qlns\QLNS\BookStoreClone\obj\Debug\
 BookStoreClone
 none
 false
 DEBUG;TRACE
-D:\Git\QLNS\BookStoreClone\App.xaml
+E:\uit\Quản lí nhà sách\qlns\QLNS\BookStoreClone\App.xaml
 141691322963
 4-94188356
-53164607752
-22523901479
+561788566461
+222090408613
 Resources\MainResource.xaml;View\BaoCaoUC.xaml;View\HoaDonUC.xaml;View\LoginWindow.xaml;View\MainWindow.xaml;View\NhapSachUC.xaml;View\PhieuThuTienUC.xaml;View\QuanLyDuLieuSach.xaml;View\QuanLyHeThongVM.xaml;View\QuanLyHoaDonUC.xaml;View\QuanLyKhachHangUC.xaml;View\QuanLyNhapSachUC.xaml;View\SachUC.xaml;View\TimKiemSachUC.xaml;
 
-True
+False
 

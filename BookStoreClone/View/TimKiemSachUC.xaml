@@ -21,8 +21,8 @@
             Visibility="Collapsed">
 
             <Grid>
-
-                <StackPanel>
+                <ScrollViewer>
+                    <StackPanel>
                     <!--  Ảnh  -->
                     <Canvas Height="364" DockPanel.Dock="Top">
                         <Image
@@ -74,7 +74,7 @@
                     <StackPanel
                         Width="350"
                         Margin="10"
-                        DockPanel.Dock="Top">
+                        DockPanel.Dock="Top" ScrollViewer.CanContentScroll="True" ScrollViewer.HorizontalScrollBarVisibility="Visible" CanVerticallyScroll="True" ScrollViewer.VerticalScrollBarVisibility="Auto">
 
                         <TextBlock
                             HorizontalAlignment="Center"
@@ -119,22 +119,27 @@
                     </StackPanel>
 
                     <!--  Mô tả  -->
-                    <DockPanel>
+                    <ScrollViewer>
+                        <DockPanel ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.CanContentScroll="True">
 
-                        <TextBlock
+                            <TextBlock
                             Margin="0,10,0,0"
                             HorizontalAlignment="Center"
                             DockPanel.Dock="Top"
-                            FontSize="17">
+                            FontSize="17" ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Auto">
                             ----------Mô tả------------
-                        </TextBlock>
-                        <TextBlock
+                            </TextBlock>
+
+
+                            <TextBlock
                             Margin="38,10,0,10"
                             FontSize="15"
                             Text="{Binding MoTaSach}"
-                            TextWrapping="Wrap" />
-                    </DockPanel>
-                </StackPanel>
+                            TextWrapping="Wrap" ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Auto" />
+                        </DockPanel>
+                    </ScrollViewer>
+                    </StackPanel>
+                </ScrollViewer>
             </Grid>
         </materialDesign:Card>
         <DockPanel>
@@ -180,18 +185,24 @@
                     Orientation="Horizontal">
 
                     <ComboBox
+                        x:Name="combotimkiem"
                         Margin="8,0,0,0"
                         materialDesign:ColorZoneAssist.Mode="Standard"
                         materialDesign:TextFieldAssist.UnderlineBrush="{DynamicResource MaterialDesignPaper}"
                         BorderBrush="{DynamicResource MaterialDesignPaper}"
                         BorderThickness="0"
-                        SelectedIndex="0">
+                        SelectedIndex="0" >
                         <ComboBoxItem>
                             Tên sách
                         </ComboBoxItem>
                         <ComboBoxItem>
                             Tác giả
                         </ComboBoxItem>
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="SelectionChanged">
+                                <i:InvokeCommandAction Command="{Binding ChontimkiemCommand}" CommandParameter="{Binding ElementName=combotimkiem}" />
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
                     </ComboBox>
                     <materialDesign:ColorZone
                         Margin="16,0,0,0"
@@ -203,7 +214,8 @@
                         <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="Auto" />
-                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="80*" />
+                                <ColumnDefinition Width="99*"/>
                                 <ColumnDefinition Width="Auto" />
                             </Grid.ColumnDefinitions>
                             <Button
@@ -214,13 +226,11 @@
                             </Button>
                             <TextBox
                                 Grid.Column="1"
-                                MinWidth="350"
-                                Margin="8,0,0,0"
-                                VerticalAlignment="Center"
-                                materialDesign:HintAssist.Hint="Build a search bar"
+                                Margin="8,4,0,4"
+                                materialDesign:HintAssist.Hint="Tìm Kiếm Sách"
                                 materialDesign:TextFieldAssist.DecorationVisibility="Hidden"
                                 BorderThickness="0"
-                                Text="{Binding TextTimKiem, UpdateSourceTrigger=PropertyChanged}" />
+                                Text="{Binding TextTimKiem, UpdateSourceTrigger=PropertyChanged}" Grid.ColumnSpan="2" VerticalAlignment="Center" />
                         </Grid>
                     </materialDesign:ColorZone>
                 </StackPanel>

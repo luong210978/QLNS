@@ -100,19 +100,6 @@ namespace BookStoreClone.ViewModel
             });
             LoadedWindowCommand = new RelayCommand<Window>((p) => { return true; }, (p) =>
             {
-
-                //p.Background = new SolidColorBrush(Color.FromArgb(255, 255, 255, 255));
-
-                //if (p == null)
-                //    return;
-                //p.Hide();
-                
-                //LoginWindow loginWindow = new LoginWindow();
-                //loginWindow.ShowDialog();
-                //if (loginWindow.DataContext == null)
-                //    return;
-
-                //var loginVM = loginWindow.DataContext as LoginViewModel;
                 if (LoginViewModel.IsLogin)
                 {
                     p.Show();
@@ -145,49 +132,30 @@ namespace BookStoreClone.ViewModel
                 }
             });
 
-            TextChangedCommand = new RelayCommand<TreeView>((p) => { if (p != null) return true; return false; }, (p) =>
-            {
-                for (int i = 0; i < p.Items.Count; i++)
-                {
-                    for (int j = 0; j < (p.Items[i] as TreeViewItem).Items.Count; j++)
-                    {
-                        TreeViewItem treeViewItem = (p.Items[i] as TreeViewItem).Items[j] as TreeViewItem;
-                        if (TextTimKiem == "")
-                            for (int k = 0; k < treeViewItem.Items.Count; k++)
-                            {
-                                treeViewItem.IsExpanded = false;
-                            }
-                        else if (treeViewItem.Header.ToString().ToLower().Contains(TextTimKiem.ToLower()))
+			TextChangedCommand = new RelayCommand<TreeView>((p) => { if (p != null) return true; return false; }, (p) =>
+			{
+				for (int i = 0; i < p.Items.Count; i++)
+				{
+					(p.Items[i] as TreeViewItem).IsExpanded = false;
+					for (int j = 0; j < (p.Items[i] as TreeViewItem).Items.Count; j++)
+					{
+						TreeViewItem treeViewItem = (p.Items[i] as TreeViewItem).Items[j] as TreeViewItem;
+						if (string.IsNullOrEmpty(TextTimKiem))
+							(p.Items[i] as TreeViewItem).IsExpanded = false;
+						else
+						{
+							if (treeViewItem.Header.ToString().ToLower().Contains(TextTimKiem.ToLower()))
+							{
+								treeViewItem.Visibility = Visibility.Visible;
+								(p.Items[i] as TreeViewItem).IsExpanded = true;
+							}
+						}
+					}
+				}
+			}
+			  );
 
-                            for (int k = 0; k < treeViewItem.Items.Count; k++)
-                            {
-                                TreeViewItem treeViewItem1 = treeViewItem.Items[k] as TreeViewItem;
-                                treeViewItem1.Visibility = Visibility.Visible;
-                                treeViewItem.IsExpanded = true;
-                            }
-                        else
-                        {
-                            int count1 = 0;
-                            for (int k = 0; k < treeViewItem.Items.Count; k++)
-                            {
-                                TreeViewItem treeViewItem1 = treeViewItem.Items[k] as TreeViewItem;
-                                if (treeViewItem1.Header.ToString().ToLower().Contains(TextTimKiem.ToLower()))
-                                {
-                                    count1++;
-                                    treeViewItem1.Visibility = Visibility.Visible;
-                                }
-                                else treeViewItem1.Visibility = Visibility.Collapsed;
-                            }
-                            if (count1 > 0)
-                                treeViewItem.IsExpanded = true;
-                            else treeViewItem.IsExpanded = false;
-                        }
-                    }
-                }
-            }
-             );
-
-            CloseApp = new RelayCommand<Window>((p) => { if (p != null) return true; return false; }, (p) =>
+			CloseApp = new RelayCommand<Window>((p) => { if (p != null) return true; return false; }, (p) =>
             {
                 p.Close();
             }

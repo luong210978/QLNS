@@ -16,8 +16,8 @@
         <ScrollViewer DockPanel.Dock="Right">
             <materialDesign:Card
             Width="426"
-            Margin="5"
-            Tag="{Binding IDSach, UpdateSourceTrigger=PropertyChanged}">
+            Margin="5,0"
+            Tag="{Binding IDSach, UpdateSourceTrigger=PropertyChanged}" Height="725">
                 <DockPanel Width="426" LastChildFill="True">
                     <TextBlock
                     Margin="24,0,0,0"

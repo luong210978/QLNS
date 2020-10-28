@@ -16,22 +16,23 @@
     TextElement.Foreground="{DynamicResource MaterialDesignBody}"
     TextOptions.TextFormattingMode="Ideal"
     TextOptions.TextRenderingMode="Auto"
-    mc:Ignorable="d">
+    mc:Ignorable="d" ScrollViewer.VerticalScrollBarVisibility="Auto">
 
     <Button
         Width="200"
         Height="320"
         Background="Transparent"
-        Command="{Binding HienThoThongTinSachCommand}"
+        Command="{Binding HienThiThongTinSachCommand}"
         CommandParameter="{Binding ElementName=tbTenSach}"
-        Style="{StaticResource btnLoginStyle}">
+        Style="{StaticResource btnLoginStyle}" ScrollViewer.VerticalScrollBarVisibility="Auto">
 
         <Grid>
+
             <materialDesign:Card
                 x:Name="card"
                 Width="180"
                 Height="300"
-                materialDesign:ShadowAssist.ShadowDepth="{Binding ShadowDepthA}">
+                materialDesign:ShadowAssist.ShadowDepth="{Binding ShadowDepthA}" Margin="0,0,9,9" VerticalAlignment="Bottom" HorizontalAlignment="Right" ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.CanContentScroll="True">
                 <i:Interaction.Triggers>
                     <i:EventTrigger EventName="MouseEnter">
                         <i:InvokeCommandAction Command="{Binding MouseEnterCommand}" CommandParameter="{Binding ElementName=card}" />
@@ -41,21 +42,19 @@
                     </i:EventTrigger>
                 </i:Interaction.Triggers>
 
-                <Border BorderBrush="AliceBlue" BorderThickness="2">
-                    <DockPanel DockPanel.Dock="Bottom">
+                <DockPanel Margin="0" Height="300" Width="180" DockPanel.Dock="Bottom">
 
-                        <Image
-                            x:Name="imgAnhSach"
-                            Width="165"
-                            Height="219"
-                            Margin="10"
-                            HorizontalAlignment="Center"
-                            VerticalAlignment="Center"
-                            DockPanel.Dock="Top"
-                            Stretch="UniformToFill" />
-
-                        <DockPanel DockPanel.Dock="Bottom">
-                            <TextBlock
+                    <Image
+                                x:Name="imgAnhSach"
+                                Width="166"
+                                Height="220"
+                                Margin="10"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                                DockPanel.Dock="Top"
+                                Stretch="Fill" Panel.ZIndex="83" MinWidth="83" MinHeight="110" />
+                    <DockPanel DockPanel.Dock="Bottom" Height="18" Width="180">
+                        <TextBlock
                                 x:Name="tbDonGia"
                                 Width="50"
                                 Margin="2"
@@ -63,22 +62,22 @@
                                 DockPanel.Dock="Right"
                                 FontSize="12"
                                 Foreground="Black" />
-                            <Grid />
-                        </DockPanel>
-                        <TextBlock
-                            MaxHeight="32"
-                            x:Name="tbTenSach"
-                            MinWidth="160"
-                            MaxWidth="160"
-                            Margin="10,0,10,5"
-                            HorizontalAlignment="Center"
-                            VerticalAlignment="Center"
-                            Foreground="Black"
-                            TextAlignment="Center"
-                            TextWrapping="Wrap" />
                         <Grid />
                     </DockPanel>
-                </Border>
+
+                    <TextBlock
+                                MaxHeight="32"
+                                x:Name="tbTenSach"
+                                MinWidth="160"
+                                MaxWidth="160"
+                                Margin="10,0,10,5"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                                Foreground="Black"
+                                TextAlignment="Center"
+                                TextWrapping="Wrap" />
+                    <Grid />
+                </DockPanel>
             </materialDesign:Card>
             <materialDesign:Card
                 x:Name="cardHetHang"

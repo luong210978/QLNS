@@ -9,16 +9,13 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:view="clr-namespace:BookStoreClone.View"
     Name="mainWindow"
-    Title="MainWindow"
     WindowStartupLocation="CenterScreen"
-    Width="1542"
-    Height="1000"
     DataContext="{StaticResource MainVM}"
     Opacity="90"
     
    
     WindowStyle="None"
-    mc:Ignorable="d" WindowState="Maximized" ResizeMode="NoResize">
+    mc:Ignorable="d" WindowState="Maximized" Title="Nhà Sách Của Lương">
     <i:Interaction.Triggers>
         <i:EventTrigger EventName="Loaded">
             <i:InvokeCommandAction Command="{Binding LoadedWindowCommand}" CommandParameter="{Binding ElementName=mainWindow}" />
@@ -94,9 +91,9 @@
         <DockPanel
             Margin="0,0,5,0"
             Background="AliceBlue"
-            DockPanel.Dock="Top">
+            DockPanel.Dock="Top" Height="60">
             <!--<Image Height="70" Width="120" Stretch="Fill" Source="C:\Users\IzY\Desktop\54524755_2213071372116402_6822513609340354560_n.png"></Image>-->
-            <TextBlock DockPanel.Dock="Left" Margin="40,0,0,0" FontSize="40" Text="{Binding TitleApp}"  FontFamily="UTM Nyala fix v2" Foreground="#FF4725BB" ></TextBlock>
+            <TextBlock DockPanel.Dock="Left" Margin="40,0,0,5" FontSize="40" Text="{Binding TitleApp}"  FontFamily="UTM Nyala fix v2" Foreground="#FF4725BB" Height="45" VerticalAlignment="Bottom" ></TextBlock>
             <Grid
                 Height="50"
                 Background="Transparent"

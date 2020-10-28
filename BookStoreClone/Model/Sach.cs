@@ -17,8 +17,9 @@ using System;
     
 public partial class Sach
 {
+		internal bool IsBtnBanSach;
 
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
     public Sach()
     {
 
@@ -72,7 +73,6 @@ public partial class Sach
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
 
     public virtual ICollection<TheLoai> TheLoais { get; set; }
-		public bool IsBtnBanSach { get; internal set; }
 		public bool IsCoTheNhapThem { get; internal set; }
 	}
 

@@ -10,5 +10,9 @@ namespace BookStoreClone.View
             InitializeComponent();
             this.DataContext = new TimKiemSachViewModel();
         }
-    }
+
+		private void EventTrigger_Changed(object sender, System.EventArgs e)
+		{
+		}
+	}
 }

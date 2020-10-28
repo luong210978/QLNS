@@ -265,7 +265,7 @@
                         </Grid.ColumnDefinitions>
                         <Button
                             Command="{Binding TimKiemCommand}"
-                            CommandParameter="{Binding ElementName=pnlHienThiNhanVien}"
+                            CommandParameter="{Binding ElementName=pnlHienThiSach}"
                             Style="{DynamicResource MaterialDesignToolButton}">
                             <materialDesign:PackIcon Kind="UserSearch" Opacity=".56" />
                         </Button>
