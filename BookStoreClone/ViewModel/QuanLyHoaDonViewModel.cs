@@ -37,6 +37,7 @@ namespace BookStoreClone.ViewModel
         public ICommand LoadCardThemSach { get; set; }
         public ICommand ThemSachVaoHoaDonCommand { get; set; }
         public ICommand CellEditEndingThemSachCommand { get; set; }
+
         public ICommand XoaChonSachCommand { get; set; }
         public ICommand ShowListChonSachCommnad { get; set; }
         public ICommand AnListChonSachComamnd { get; set; }
@@ -190,7 +191,7 @@ namespace BookStoreClone.ViewModel
                 TongGiaBan = ListCTHD_BanSach.Sum(x => (int)x.SoLuong * (int)x.DonGiaBan);
                 Const.IDNguoiDung = DataProvider.Ins.DB.NguoiDungs.ToList()[1].TenDangNhap;
             });
-
+            
             CellEditEndingThemSachCommand = new RelayCommand<object>((p) => { return true; }, (p) =>
             {
                 foreach (CTHD a in ListCTHD_BanSach)

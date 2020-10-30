@@ -55,7 +55,7 @@
                     Margin="20,110,5,5"
                     DockPanel.Dock="Top" 
                     Orientation="Horizontal">
-                    <TextBlock FontSize="15" Margin="5" Text="Số lượng tồn tối đa sau khi nhập: " />
+                    <TextBlock FontSize="15" Margin="5" Text="Số Lượng tồn được phép nhập tiếp: " />
                     <TextBox FontSize="15"  BorderBrush="Black"  Text="{Binding SoLuongSachTonToiThieuDeNhap, UpdateSourceTrigger=PropertyChanged}" Width="100" />
                     <TextBlock FontSize="15" Margin="5" Text="quyển"></TextBlock>
                 </StackPanel>

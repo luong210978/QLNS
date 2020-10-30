@@ -570,10 +570,15 @@
                         HorizontalScrollBarVisibility="Disabled"
                         IsReadOnly="False"
                         ItemsSource="{Binding ListCTHD_BanSach}"
-                        SelectedItem="{Binding SelectedItemCTHD}" SelectionMode="Single">
-                       
+                        SelectedItem="{Binding SelectedItemCTHD,Mode=OneWayToSource}" SelectionMode="Single">
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="CellEditEnding">
+                                <i:InvokeCommandAction Command="{Binding CellEditEndingThemSachCommand}" />
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                        
                         <DataGrid.Columns>
-
+                            
                             <DataGridTextColumn
                                 MaxWidth="170"
                                 Binding="{Binding Sach.TenSach}"
@@ -584,8 +589,10 @@
                                 IsEditable="True"
                                 ItemsSourceBinding="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type DataGrid}}, Path=DataContext.ListChonSoLuong}"
                                 SelectedValueBinding="{Binding SoLuong, UpdateSourceTrigger=PropertyChanged}" 
+                                
                                 />
-                            
+                           
+
                             <DataGridTextColumn
                                 Binding="{Binding DonGiaBan}"
                                 Header="Đơn giá bán"
@@ -599,7 +606,7 @@
                                                 Height="25"
                                                 Command="{Binding XoaChonSachCommand}"
                                                 DataContext="{StaticResource QuanLyHoaDonVM}"
-                                                IsEnabled="{Binding}"
+                                                IsEnabled="True"
                                                 Style="{StaticResource MaterialDesignFloatingActionMiniButton}"
                                                 ToolTip="Xóa">
                                                 <materialDesign:PackIcon
@@ -610,13 +617,10 @@
                                         </StackPanel>
                                     </DataTemplate>
                                 </DataGridTemplateColumn.CellTemplate>
+                                
                             </DataGridTemplateColumn>
                         </DataGrid.Columns>
-                        <i:Interaction.Triggers>
-                            <i:EventTrigger EventName="CellEditEnd">
-                                <i:InvokeCommandAction Command="{Binding CellEditEndingThemSachCommand}" />
-                            </i:EventTrigger>
-                        </i:Interaction.Triggers>
+                        
                     </DataGrid>
                 </DockPanel>
             </DockPanel>
