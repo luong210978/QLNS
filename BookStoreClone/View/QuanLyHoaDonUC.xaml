@@ -570,13 +570,8 @@
                         HorizontalScrollBarVisibility="Disabled"
                         IsReadOnly="False"
                         ItemsSource="{Binding ListCTHD_BanSach}"
-                        SelectedItem="{Binding SelectedItemCTHD}"
-                        SelectionMode="Single">
-                        <i:Interaction.Triggers>
-                            <i:EventTrigger EventName="CellEditEnding">
-                                <i:InvokeCommandAction Command="{Binding CellEditEndingThemSachCommand}" />
-                            </i:EventTrigger>
-                        </i:Interaction.Triggers>
+                        SelectedItem="{Binding SelectedItemCTHD}" SelectionMode="Single">
+                       
                         <DataGrid.Columns>
 
                             <DataGridTextColumn
@@ -588,7 +583,9 @@
                                 Header="Số lượng"
                                 IsEditable="True"
                                 ItemsSourceBinding="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type DataGrid}}, Path=DataContext.ListChonSoLuong}"
-                                SelectedValueBinding="{Binding SoLuong, UpdateSourceTrigger=PropertyChanged}" />
+                                SelectedValueBinding="{Binding SoLuong, UpdateSourceTrigger=PropertyChanged}" 
+                                />
+                            
                             <DataGridTextColumn
                                 Binding="{Binding DonGiaBan}"
                                 Header="Đơn giá bán"
@@ -615,6 +612,11 @@
                                 </DataGridTemplateColumn.CellTemplate>
                             </DataGridTemplateColumn>
                         </DataGrid.Columns>
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="CellEditEnd">
+                                <i:InvokeCommandAction Command="{Binding CellEditEndingThemSachCommand}" />
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
                     </DataGrid>
                 </DockPanel>
             </DockPanel>

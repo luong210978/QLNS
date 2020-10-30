@@ -94,7 +94,7 @@ namespace BookStoreClone.ViewModel
                     {
                         if (SoLuongMua != 0)
                         {
-                            if (SachSelected.SoLuongTon - SoLuongMua >= 20)
+                            if (SachSelected.SoLuongTon - SoLuongMua >= Const.QuyDinh_TonToiThieuSauKhiBan)
                             {
                                 CTHD sach = new CTHD();
                                 sach.SoLuong = SoLuongMua;
@@ -107,7 +107,7 @@ namespace BookStoreClone.ViewModel
                                 SachSelected = null;
                             }
                             else
-                                MessageBox.Show("Không thể đáp ứng số lượng trên!", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Warning);
+                                MessageBox.Show("Không thể đáp ứng số lượng trên vui lòng nhập lại số lượng mua!", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Warning);
                         }
                         else
                             MessageBox.Show("Bạn phải nhập số lượng sách cần mua", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Warning);

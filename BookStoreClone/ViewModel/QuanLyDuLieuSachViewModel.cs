@@ -627,7 +627,6 @@
 				if (ListSach[i].SoLuongTon > Const.QuyDinh_TonToiThieuSauKhiBan)
 					ListSach[i].IsBtnBanSach = true;
 				else ListSach[i].IsBtnBanSach = false;
-
 				if (ListSach[i].SoLuongTon <= Const.QuyDinh_SoLuongSachTonToiThieuDeNhap)
 					ListSach[i].IsCoTheNhapThem = true;
 				else ListSach[i].IsCoTheNhapThem = false;

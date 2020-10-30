@@ -19,7 +19,7 @@
                 materialDesign:ButtonProgressAssist.IsIndicatorVisible="True"
                 materialDesign:ButtonProgressAssist.Value="-1"
                 Command="{Binding ShowSuaDoiQuyDinhCommand}"
-                Content="{materialDesign:PackIcon Kind=CreditCardMinusOutline}"
+                Content="{materialDesign:PackIcon Kind=Alert}"
                 Style="{StaticResource MaterialDesignFloatingActionButton}"
                 ToolTip="Sửa đổi quy định"
                 ToolTipService.Placement="Right" />
