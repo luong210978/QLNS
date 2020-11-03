@@ -241,7 +241,7 @@
             Margin="5"
             DataContext="{StaticResource QuanLyKhachHangVM}"
             DockPanel.Dock="Right"
-            Visibility="{Binding VisibilityChonKhachHang, Source={StaticResource QuanLyHoaDonVM}, UpdateSourceTrigger=PropertyChanged}">
+            Visibility="{Binding VisibilityChonKhachHang, Source={StaticResource QuanLyHoaDonVM}, UpdateSourceTrigger=PropertyChanged}" Width="433">
             <i:Interaction.Triggers>
                 <i:EventTrigger EventName="Loaded">
                     <i:InvokeCommandAction Command="{Binding LoadCardKhachHang, Source={StaticResource QuanLyHoaDonVM}}" CommandParameter="{Binding ElementName=pnlChonKhachHang}" />
@@ -291,10 +291,9 @@
                         </Grid>
                     </materialDesign:ColorZone>
                 </DockPanel>
-                <ScrollViewer Margin="10" Padding="10,0,10,0">
+                <ScrollViewer Margin="0,10,0,0" Padding="10,0,10,0" Width="442">
                     <DataGrid
                         x:Name="dataKH"
-                        Margin="10"
                         VerticalContentAlignment="Top"
                         AutoGenerateColumns="False"
                         Background="Transparent"
@@ -303,7 +302,7 @@
                         HeadersVisibility="All"
                         HorizontalScrollBarVisibility="Auto"
                         IsReadOnly="True"
-                        ItemsSource="{Binding ListKH}">
+                        ItemsSource="{Binding ListKH}" Width="409" RenderTransformOrigin="0.344,0.493">
 
                         <DataGrid.Columns>
                             <DataGridTemplateColumn>
@@ -341,6 +340,10 @@
                                 Binding="{Binding SoTienNo}"
                                 Header="Nợ"
                                 IsReadOnly="True" />
+                            <DataGridTextColumn
+                                Binding="{Binding SoSachChuaTra}"
+                                Header="Sách chưa trả"
+                                IsReadOnly="True" />
                         </DataGrid.Columns>
                     </DataGrid>
                 </ScrollViewer>
@@ -348,19 +351,19 @@
         </materialDesign:Card>
 
         <materialDesign:Card
-            Width="426"
+            Width="620"
             Margin="5"
             DockPanel.Dock="Right"
             Tag="{Binding IDSach, UpdateSourceTrigger=PropertyChanged}"
             Visibility="{Binding VisibilityTaoHoaDon}">
-            <DockPanel Width="426" LastChildFill="True">
+            <DockPanel Width="600" LastChildFill="True">
                 <TextBlock
                     Margin="24,0,0,0"
                     DockPanel.Dock="Top"
                     FontSize="24"
                     Text="Tạo hóa đơn bán sách" />
 
-                <DockPanel Margin="0,20,0,0">
+                <DockPanel Margin="0,20,0,0.4">
                     <DockPanel DockPanel.Dock="Top">
                         <DockPanel Margin="10" DockPanel.Dock="Right">
                             <StackPanel DockPanel.Dock="Right">
@@ -519,12 +522,35 @@
                     </Grid>
 
                     <DockPanel Margin="10" DockPanel.Dock="Bottom">
+                        <TextBlock DockPanel.Dock="Bottom" Text="Lưu ý trả sách trong vòng 30 ngày sau khi mượn, quá hạn mỗi tháng trả thêm 10% giá trị sách"></TextBlock>
+                        <!--<Button
+                                    x:Name="btnInHoaDon"
+                                    Width="130"
+                                    
+                                    Command="{Binding InHoaDonCommand}"
+                                    CommandParameter="{Binding ElementName=btnInHoaDon}"
+                                    DockPanel.Dock="Bottom"
+                                    
+                                    Style="{StaticResource MaterialDesignRaisedDarkButton}"
+                                    ToolTip="In Hóa Đơn" HorizontalAlignment="Left">
+                            In Hóa Đơn
+                        </Button>-->
                         <DockPanel DockPanel.Dock="Right">
                             <StackPanel DockPanel.Dock="Top" Orientation="Horizontal">
                                 <TextBlock
                                     Margin="1"
                                     FontSize="15"
+                                    Text="Tổng số sách mượn: " />
+
+                                <TextBlock FontSize="15" Text="{Binding TongSachMuon}" />
+                            </StackPanel>
+                            <StackPanel DockPanel.Dock="Top" Orientation="Horizontal">
+
+                                <TextBlock
+                                    Margin="1"
+                                    FontSize="15"
                                     Text="Thành tiền: " />
+
                                 <TextBlock FontSize="15" Text="{Binding TongGiaBan}" />
                             </StackPanel>
                             <StackPanel DockPanel.Dock="Top" Orientation="Horizontal">
@@ -545,14 +571,16 @@
                                     Margin="0,10,0,0"
                                     Command="{Binding LuuHoaDonCommand}"
                                     CommandParameter="{Binding ElementName=btnLuuHoaDon}"
-                                    DockPanel.Dock="Right"
+                                    DockPanel.Dock="Bottom"
                                     Style="{StaticResource MaterialDesignRaisedDarkButton}"
-                                    ToolTip="Resource name: MaterialDesignRaisedLightDarkButton">
+                                    ToolTip="In Hóa Đơn" VerticalAlignment="Bottom" HorizontalAlignment="Right">
                                     Thanh toán
                                 </Button>
+                               
                                 <StackPanel />
                             </DockPanel>
                         </DockPanel>
+
 
                         <Grid />
                     </DockPanel>
@@ -567,18 +595,18 @@
                         DockPanel.Dock="Top"
                         GridLinesVisibility="None"
                         HeadersVisibility="All"
-                        HorizontalScrollBarVisibility="Disabled"
+                        HorizontalScrollBarVisibility="Auto"
                         IsReadOnly="False"
                         ItemsSource="{Binding ListCTHD_BanSach}"
-                        SelectedItem="{Binding SelectedItemCTHD,Mode=OneWayToSource}" SelectionMode="Single">
+                        SelectedItem="{Binding SelectedItemCTHD,Mode=OneWayToSource}" SelectionMode="Single" Width="600">
                         <i:Interaction.Triggers>
                             <i:EventTrigger EventName="CellEditEnding">
                                 <i:InvokeCommandAction Command="{Binding CellEditEndingThemSachCommand}" />
                             </i:EventTrigger>
                         </i:Interaction.Triggers>
-                        
+
                         <DataGrid.Columns>
-                            
+
                             <DataGridTextColumn
                                 MaxWidth="170"
                                 Binding="{Binding Sach.TenSach}"
@@ -591,13 +619,26 @@
                                 SelectedValueBinding="{Binding SoLuong, UpdateSourceTrigger=PropertyChanged}" 
                                 
                                 />
-                           
+
 
                             <DataGridTextColumn
                                 Binding="{Binding DonGiaBan}"
                                 Header="Đơn giá bán"
+                                IsReadOnly="False" />
+                            <materialDesign:DataGridComboBoxColumn
+                                Header="Phương Thức"
+                                IsEditable="True"
+                                ItemsSourceBinding="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type DataGrid}}, Path=DataContext.ListChonPhuongThuc}"
+                                SelectedValueBinding="{Binding PhuongThuc, UpdateSourceTrigger=PropertyChanged}" CanUserSort="False" 
+                              
+                                 
+                              />
+                            <DataGridTextColumn
+                                Binding="{Binding ThanhTien, UpdateSourceTrigger=PropertyChanged}"
+                                Header="Thành Tiền"
                                 IsReadOnly="True" />
                             <DataGridTemplateColumn>
+
                                 <DataGridTemplateColumn.CellTemplate>
                                     <DataTemplate>
                                         <StackPanel Orientation="Horizontal">
@@ -617,10 +658,10 @@
                                         </StackPanel>
                                     </DataTemplate>
                                 </DataGridTemplateColumn.CellTemplate>
-                                
+
                             </DataGridTemplateColumn>
                         </DataGrid.Columns>
-                        
+
                     </DataGrid>
                 </DockPanel>
             </DockPanel>
@@ -708,7 +749,7 @@
                                                     Height="24"
                                                     Margin="0,0,10,0"
                                                     Kind="AddressMarker" />
-                       
+
                         <TextBlock
                             MaxWidth="320"
                             FontSize="15"
@@ -780,6 +821,10 @@
                                 Binding="{Binding DonGiaBan}"
                                 Header="Đơn giá"
                                 IsReadOnly="true" />
+                            <DataGridTextColumn
+                                Binding="{Binding PhuongThuc}"
+                                Header="Phương Thức"
+                                IsReadOnly="true" />
                         </DataGrid.Columns>
                     </DataGrid>
 
@@ -804,7 +849,7 @@
         </materialDesign:Card>
         <DockPanel LastChildFill="True" Visibility="Visible">
             <WrapPanel DockPanel.Dock="Top">
-                    <materialDesign:ColorZone
+                <materialDesign:ColorZone
                     Width="250"
                     Margin="100,10,10,10"
                     HorizontalAlignment="Center"
@@ -813,19 +858,19 @@
                     CornerRadius="2"
                     DockPanel.Dock="Top"
                     Mode="Standard">
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="Auto" />
-                                <ColumnDefinition Width="*" />
-                                <ColumnDefinition Width="Auto" />
-                            </Grid.ColumnDefinitions>
-                            <Button
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <Button
                             Command="{Binding TimKiemCommand}"
                             CommandParameter="{Binding ElementName=pnlHienThiSach}"
                             Style="{DynamicResource MaterialDesignToolButton}">
-                                <materialDesign:PackIcon Kind="BookSearch" Opacity=".56" />
-                            </Button>
-                            <TextBox
+                            <materialDesign:PackIcon Kind="BookSearch" Opacity=".56" />
+                        </Button>
+                        <TextBox
                             Grid.Column="1"
                             MinWidth="200"
                             Margin="8,0,0,0"
@@ -834,22 +879,22 @@
                             materialDesign:TextFieldAssist.DecorationVisibility="Hidden"
                             BorderThickness="0"
                             Text="{Binding TextTimKiemHoaDon, UpdateSourceTrigger=PropertyChanged}" />
-                        </Grid>
-                    </materialDesign:ColorZone>
-                    <DatePicker
+                    </Grid>
+                </materialDesign:ColorZone>
+                <DatePicker
                     Width="100"
                     Margin="30,0,0,0"
                     materialDesign:HintAssist.Hint="Bắt đầu từ"
                     SelectedDate="{Binding DateTimeStart, UpdateSourceTrigger=PropertyChanged}"
                     Style="{StaticResource MaterialDesignFloatingHintDatePicker}" />
-                    <DatePicker
+                <DatePicker
                     Width="100"
                     Margin="30,0,0,0"
                     materialDesign:HintAssist.Hint="Đến ngày"
                     SelectedDate="{Binding DateTimeEnd, UpdateSourceTrigger=PropertyChanged}"
                     Style="{StaticResource MaterialDesignFloatingHintDatePicker}" />
-                </WrapPanel>
-            
+            </WrapPanel>
+
             <ScrollViewer Margin="5" Padding="10,0,10,0">
                 <DataGrid
                     x:Name="dataHoaDon"

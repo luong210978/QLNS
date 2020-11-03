@@ -13,6 +13,7 @@ namespace BookStoreClone
 		public static int QuyDinh_SoLuongSachNhapToiThieu { get; set; } = DataProvider.Ins.DB.QuyDinhs.ToList()[QuyDinh_Count - 1].SoLuongSachNhapToiThieu;
 		public static int QuyDinh_SoLuongSachTonToiDaDeNhap { get; set; } = DataProvider.Ins.DB.QuyDinhs.ToList()[QuyDinh_Count - 1].SoLuongSachTonToiThieuDeNhap;
 		public static int QuyDinh_HeSoDonGia { get; set; } = 115;
+		public static int QuyDinh_HeSoDonGiaMuon { get; set; } = 10;
 		public static int QuyDinh_SoLuongSachNhapToiDa { get; set; } = 300;
 		public static string IDNguoiDung { get; set; }
 	}

@@ -16,7 +16,7 @@ namespace BookStoreClone.ViewModel
         public ObservableCollection<HoaDon> ListHoaDon { get => _listHoaDon; set { _listHoaDon = value; OnPropertyChanged(); } }
         public ObservableCollection<CTHD> ListCTHD_BanSach { get => _listCTHD_BanSach; set { _listCTHD_BanSach = value; } }
         public ObservableCollection<int> ListChonSoLuong { get; set; }
-
+        public ObservableCollection<string> ListChonPhuongThuc { get; set; }
         private DateTime _selectedDateTime;
         public DateTime SelectedDateTime { get => _selectedDateTime; set { _selectedDateTime = value; OnPropertyChanged(); } }
 
@@ -31,7 +31,7 @@ namespace BookStoreClone.ViewModel
         #region Thêm Sách done
 
         private int _tongGiaBan;
-
+        private int _tongSachMuon;
         private CTHD _selectedItemCTHD;
         private QuanLyDuLieuSachViewModel QuanLyDuLieuSachVM;
         public ICommand LoadCardThemSach { get; set; }
@@ -42,10 +42,15 @@ namespace BookStoreClone.ViewModel
         public ICommand ShowListChonSachCommnad { get; set; }
         public ICommand AnListChonSachComamnd { get; set; }
 
-        public int TongGiaBan { get => _tongGiaBan; set { _tongGiaBan = value; OnPropertyChanged(); 
-               
+        public int TongGiaBan { get => _tongGiaBan; set { _tongGiaBan = value; OnPropertyChanged(); foreach (CTHD hd in ListCTHD_BanSach)
+                    if (hd.PhuongThuc == "Mua")
+                        hd.ThanhTien = (int)hd.SoLuong * (int)hd.DonGiaBan;
+                    else
+                    {
+                        hd.ThanhTien = (int)hd.SoLuong * (int)hd.DonGiaBan * Const.QuyDinh_HeSoDonGiaMuon / 100;
+                    }
             } }
-
+        public int TongSachMuon { get => _tongSachMuon; set { _tongSachMuon = value; OnPropertyChanged(); } }
         public CTHD SelectedItemCTHD
         {
             get => _selectedItemCTHD;
@@ -55,11 +60,11 @@ namespace BookStoreClone.ViewModel
                 OnPropertyChanged();
                 if (SelectedItemCTHD == null)
                     return;
-
+                
                 for (int i = 2; i < SelectedItemCTHD.Sach.SoLuongTon - Const.QuyDinh_TonToiThieuSauKhiBan; i++)
                 {
                     ListChonSoLuong.Add(i);
-                }
+                }                
             }
         }
 
@@ -84,6 +89,8 @@ namespace BookStoreClone.ViewModel
         private string _soTienTra;
         private HoaDon _SelectedHoaDon;
         public ICommand LuuHoaDonCommand { get; set; }
+        public ICommand InHoaDonCommand { get; set; }
+
         public ICommand TaoMoiHoaDonCommand { get; set; }
         public string SoTienTra { get => _soTienTra; set { _soTienTra = value; OnPropertyChanged(); } }
         public HoaDon SelectedHoaDon { get => _SelectedHoaDon; set { _SelectedHoaDon = value; OnPropertyChanged(); XulyHienThemHoaDon(-1); } }
@@ -172,10 +179,11 @@ namespace BookStoreClone.ViewModel
             ListCTHD_BanSach = new ObservableCollection<CTHD>();
 
             ListChonSoLuong = new ObservableCollection<int>();
+            ListChonPhuongThuc = new ObservableCollection<string>();
             ListChonSoLuong.Add(1);
-
+            ListChonPhuongThuc.Add("Mua");
+            ListChonPhuongThuc.Add("Mượn");
             XulyHienThemHoaDon(-1);
-
             User = DataProvider.Ins.DB.NguoiDungs.Where(x => x.TenDangNhap == Const.IDNguoiDung).First();
 
             #region Thêm sách done
@@ -187,11 +195,22 @@ namespace BookStoreClone.ViewModel
                     if (p.MaSach == ListCTHD_BanSach[i].Sach.MaSach)
                         return;
                 }
-                ListCTHD_BanSach.Add(new CTHD() { Sach = DataProvider.Ins.DB.Saches.Where(x => x.MaSach == p.MaSach).First(), DonGiaBan = p.DonGia, SoLuong = 1 });
-                TongGiaBan = ListCTHD_BanSach.Sum(x => (int)x.SoLuong * (int)x.DonGiaBan);
+
+                ListCTHD_BanSach.Add(new CTHD() { Sach = DataProvider.Ins.DB.Saches.Where(x => x.MaSach == p.MaSach).First(), DonGiaBan = p.DonGia, SoLuong = 1, PhuongThuc = "Mua" });
+                //TongGiaBan = ListCTHD_BanSach.Sum(x => (int)x.SoLuong * (int)x.DonGiaBan);
+                TongSachMuon = 0;
+                foreach (CTHD hd in ListCTHD_BanSach)
+                    if (hd.PhuongThuc == "Mua")
+                        hd.ThanhTien = (int)hd.SoLuong * (int)hd.DonGiaBan;
+                    else { hd.ThanhTien = (int)hd.SoLuong * (int)hd.DonGiaBan * Const.QuyDinh_HeSoDonGiaMuon / 100;
+                        TongSachMuon += (int)hd.SoLuong;
+                    }
+                TongGiaBan = ListCTHD_BanSach.Sum(x => (int)x.ThanhTien);
+
+
                 Const.IDNguoiDung = DataProvider.Ins.DB.NguoiDungs.ToList()[1].TenDangNhap;
             });
-            
+
             CellEditEndingThemSachCommand = new RelayCommand<object>((p) => { return true; }, (p) =>
             {
                 foreach (CTHD a in ListCTHD_BanSach)
@@ -199,11 +218,21 @@ namespace BookStoreClone.ViewModel
                     if (a.Sach.SoLuongTon - a.SoLuong < Const.QuyDinh_TonToiThieuSauKhiBan)
                         a.SoLuong = a.Sach.SoLuongTon - Const.QuyDinh_TonToiThieuSauKhiBan;
                 };
-                try { TongGiaBan = ListCTHD_BanSach.Sum(x => (int)x.SoLuong * (int)x.DonGiaBan);
-                    
+                try
+                {
+                    TongSachMuon = 0;
+                    foreach (CTHD hd in ListCTHD_BanSach)
+                        if (hd.PhuongThuc == "Mua")
+                            hd.ThanhTien = (int)hd.SoLuong * (int)hd.DonGiaBan;
+                        else {
+                            hd.ThanhTien = (int)hd.SoLuong * (int)hd.DonGiaBan * Const.QuyDinh_HeSoDonGiaMuon / 100;
+                            TongSachMuon += (int)hd.SoLuong;
+                        }
+                    TongGiaBan = ListCTHD_BanSach.Sum(x => (int)x.ThanhTien);
+
                 }
                 catch { }
-                
+
             });
             ShowListChonSachCommnad = new RelayCommand<object>((p) => { return true; }, (p) =>
             {
@@ -220,7 +249,12 @@ namespace BookStoreClone.ViewModel
                     if (ListCTHD_BanSach[i].Sach.MaSach == SelectedItemCTHD.Sach.MaSach)
                     {
                         ListCTHD_BanSach.Remove(ListCTHD_BanSach[i]);
-                        TongGiaBan = ListCTHD_BanSach.Sum(x => (int)x.SoLuong * (int)x.DonGiaBan);
+                        TongSachMuon = 0;
+                        foreach (CTHD hd in ListCTHD_BanSach)
+                            if (hd.PhuongThuc == "Mua")
+                                hd.ThanhTien = (int)hd.SoLuong * (int)hd.DonGiaBan;
+                            else { hd.ThanhTien = (int)hd.SoLuong * (int)hd.DonGiaBan * Const.QuyDinh_HeSoDonGiaMuon / 100; TongSachMuon += (int)hd.SoLuong; }
+                        TongGiaBan = ListCTHD_BanSach.Sum(x => (int)x.ThanhTien);
                         return;
                     }
                 }
@@ -255,8 +289,27 @@ namespace BookStoreClone.ViewModel
             #endregion Chọn khách hàng done
 
             #region Hóa đơn
-
-            LuuHoaDonCommand = new RelayCommand<Button>(
+        //    InHoaDonCommand = new RelayCommand<Button>(
+        //       (p) => { return false; },(p)=> 
+        //       {
+        //           {
+        //               PrintDialog pDlg = new PrintDialog();
+					   //PrintDocument pDoc = new PrintDocument();
+        //               pDoc.DocumentName = "Print Document";
+        //               pDlg.Document = pDoc;
+        //               pDlg.AllowSelection = true;
+        //               pDlg.AllowSomePages = true;
+        //               if (pDlg.ShowDialog() == DialogResult.OK)
+        //               {
+        //                   pDoc.Print();
+        //               }
+        //               else
+        //               {
+        //                   MessageBox.Show("Đã hủy in");
+        //               }
+        //           }
+        //       });
+           LuuHoaDonCommand = new RelayCommand<Button>(
                 (p) =>
                 {
 
@@ -288,6 +341,8 @@ namespace BookStoreClone.ViewModel
                             DataProvider.Ins.DB.HoaDons.Add(hoaDon);
                             DataProvider.Ins.DB.Database.ExecuteSqlCommand("SET IDENTITY_INSERT [dbo].[HoaDon] OFF");
                             SelectedKhachHang.SoTienNo += TongGiaBan - int.Parse(SoTienTra);
+                            SelectedKhachHang.SoSachChuaTra += TongSachMuon;
+                           // SelectedKhachHang.SoSachChuaTra +=  - int.Parse(SoTienTra);
                             for (int i = 0; i < ListCTHD_BanSach.Count; i++)
                                 ListCTHD_BanSach[i].Sach.SoLuongTon -= ListCTHD_BanSach[i].SoLuong;
                             DataProvider.Ins.DB.SaveChanges();

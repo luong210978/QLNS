@@ -16,6 +16,7 @@
     <viewmodel:PhieuThuTienViewModel x:Key="PhieuThuTienVM"></viewmodel:PhieuThuTienViewModel>
     <viewmodel:QuanLyHeThongViewModel x:Key="QuanLyHeThongVM"/>
     <viewmodel:LoginViewModel x:Key="LoginVM" />
+    
     <Style x:Key="btnLoginStyle" TargetType="Button">
         <Setter Property="Background" Value="{DynamicResource btnLoginImgIdle}" />
         <Setter Property="BorderThickness" Value="0" />

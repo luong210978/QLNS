@@ -222,38 +222,38 @@ namespace BookStoreClone.ViewModel
                         TitleApp = "Khách Hàng";
                         break;
 
-                    case "Nhập Sách":
-                        PnlContent.Children.Clear();
-                        PnlContent.Children.Add(new QuanLyNhapSachUC() { });
-                        TitleApp = "Nhập Sách";
-                        break;
+					case "Nhập Sách":
+						PnlContent.Children.Clear();
+						PnlContent.Children.Add(new QuanLyNhapSachUC() { });
+						TitleApp = "Nhập Sách";
+						break;
 
-                    case "Lập Hóa Đơn Bán Sách":
-                        PnlContent.Children.Clear();
-                        PnlContent.Children.Add(new QuanLyHoaDonUC() { });
-                        TitleApp = "Lập Hóa Đơn Bán Sách";
-                        break;
+					case "Lập Hóa Đơn Bán Sách/ Mượn Sách":
+						PnlContent.Children.Clear();
+						PnlContent.Children.Add(new QuanLyHoaDonUC() { });
+						TitleApp = "Lập Hóa Đơn Bán Sách/ Mượn Sách";
+						break;
 
-                    case "Lập Phiếu Thu Tiền":
-                        PnlContent.Children.Clear();
-                        PnlContent.Children.Add(new PhieuThuTienUC());
-                        TitleApp = "Lập Phiếu Thu Tiền";
-                        break;
+					case "Lập Phiếu Thu Tiền":
+						PnlContent.Children.Clear();
+						PnlContent.Children.Add(new PhieuThuTienUC());
+						TitleApp = "Lập Phiếu Thu Tiền";
+						break;
 
-                    case "Báo Cáo":
-                        PnlContent.Children.Clear();
-                        PnlContent.Children.Add(new BaoCaoUC());
-                        TitleApp = "Báo Cáo Tồn - Nợ ";
-                        break;
+					case "Báo Cáo":
+						PnlContent.Children.Clear();
+						PnlContent.Children.Add(new BaoCaoUC());
+						TitleApp = "Báo Cáo Tồn - Nợ ";
+						break;
 
-                    
 
-                    case "Quản Lý Hệ Thống":
-                        PnlContent.Children.Clear();
-                        PnlContent.Children.Add(new QuanLyHeThongVM());
-                        TitleApp = "Quản Lý Hệ Thống";
-                        break;
-                }
+
+					case "Quản Lý Hệ Thống":
+						PnlContent.Children.Clear();
+						PnlContent.Children.Add(new QuanLyHeThongVM());
+						TitleApp = "Quản Lý Hệ Thống";
+						break;
+				}
             }
             );
 

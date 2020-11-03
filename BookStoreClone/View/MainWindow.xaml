@@ -15,7 +15,7 @@
     
    
     WindowStyle="None"
-    mc:Ignorable="d" WindowState="Maximized" Title="Nhà Sách Của Lương">
+    mc:Ignorable="d" WindowState="Maximized" Title="Nhà Sách Của Lương" MinWidth="900" MinHeight="200">
     <i:Interaction.Triggers>
         <i:EventTrigger EventName="Loaded">
             <i:InvokeCommandAction Command="{Binding LoadedWindowCommand}" CommandParameter="{Binding ElementName=mainWindow}" />
@@ -69,7 +69,7 @@
                                 </TreeViewItem>
                                 <TreeViewItem Header="Kinh Doanh" Visibility="{Binding SetKinhDoanh}">
                                     <TreeViewItem Header="Nhập Sách" />
-                                    <TreeViewItem Header="Lập Hóa Đơn Bán Sách" />
+                                    <TreeViewItem Header="Lập Hóa Đơn Bán Sách/ Mượn Sách" />
                                     <TreeViewItem Header="Lập Phiếu Thu Tiền" />
                                 </TreeViewItem>
                                 <TreeViewItem Header="Báo Cáo" Visibility="{Binding SetQuanLy}">

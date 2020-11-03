@@ -42,8 +42,7 @@ public partial class KhachHang
     public string Email { get; set; }
 
     public int SoTienNo { get; set; }
-
-
+    public int SoSachChuaTra { get; set; }
 
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
 

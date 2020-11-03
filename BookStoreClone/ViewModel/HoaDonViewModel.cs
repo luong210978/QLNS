@@ -101,7 +101,10 @@ namespace BookStoreClone.ViewModel
                                 sach.MaSach = SachSelected.MaSach;
                                 sach.Sach = SachSelected;
                                 sach.DonGiaBan = (int)DonGiaBan;
+                                if(sach.PhuongThuc=="Mua")
                                 ThanhTien = (int)DonGiaBan * SoLuongMua;
+                                else
+                                    ThanhTien = (int)DonGiaBan * SoLuongMua*Const.QuyDinh_HeSoDonGiaMuon;
                                 TongHoaDon += ThanhTien;
                                 ListCTHD.Add(sach);
                                 SachSelected = null;
