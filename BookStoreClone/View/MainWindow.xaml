@@ -70,7 +70,7 @@
                                 <TreeViewItem Header="Kinh Doanh" Visibility="{Binding SetKinhDoanh}">
                                     <TreeViewItem Header="Nhập Sách" />
                                     <TreeViewItem Header="Lập Hóa Đơn Bán Sách/ Mượn Sách" />
-                                    <TreeViewItem Header="Lập Phiếu Thu Tiền" />
+                                    <TreeViewItem Header="Lập Phiếu Thu Tiền/ Trả Sách" />
                                 </TreeViewItem>
                                 <TreeViewItem Header="Báo Cáo" Visibility="{Binding SetQuanLy}">
                                    

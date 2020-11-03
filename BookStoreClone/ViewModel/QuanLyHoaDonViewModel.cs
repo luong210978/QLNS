@@ -335,8 +335,15 @@ namespace BookStoreClone.ViewModel
                     while (true)
                         try
                         {
+                            
                             HoaDon hoaDon = new HoaDon() { CTHDs = new ObservableCollection<CTHD>(ListCTHD_BanSach), KhachHang = SelectedKhachHang, NguoiDung = User, TongTien = TongGiaBan, NgayBan = SelectedDateTime };
                             hoaDon.SoTienTra = int.Parse(SoTienTra);
+                            foreach(CTHD hd in ListCTHD_BanSach)
+							{
+                                if(hd.PhuongThuc=="Mượn")
+                                hd.TrangThai ="Chưa trả";
+							}                                
+                            hoaDon.SoSachMuon = TongSachMuon;
                             DataProvider.Ins.DB.Database.ExecuteSqlCommand("SET IDENTITY_INSERT [dbo].[HoaDon] ON");
                             DataProvider.Ins.DB.HoaDons.Add(hoaDon);
                             DataProvider.Ins.DB.Database.ExecuteSqlCommand("SET IDENTITY_INSERT [dbo].[HoaDon] OFF");

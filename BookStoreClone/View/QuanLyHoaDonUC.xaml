@@ -928,6 +928,10 @@
                             Binding="{Binding TongTien}"
                             Header="Giá trị đơn hàng"
                             IsReadOnly="False" />
+                        <DataGridTextColumn
+                            Binding="{Binding SoSachMuon }"
+                            Header="Số sách cho mượn"
+                            IsReadOnly="False" />
                     </DataGrid.Columns>
                 </DataGrid>
             </ScrollViewer>

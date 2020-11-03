@@ -26,7 +26,7 @@ public partial class CTHD
     public Nullable <long> ThanhTien { get; set; }
     public virtual HoaDon HoaDon { get; set; }
     public virtual Sach Sach { get; set; }
-
+    public String TrangThai { get; set; }
 }
 
 }

@@ -234,10 +234,10 @@ namespace BookStoreClone.ViewModel
 						TitleApp = "Lập Hóa Đơn Bán Sách/ Mượn Sách";
 						break;
 
-					case "Lập Phiếu Thu Tiền":
+					case "Lập Phiếu Thu Tiền/ Trả Sách":
 						PnlContent.Children.Clear();
 						PnlContent.Children.Add(new PhieuThuTienUC());
-						TitleApp = "Lập Phiếu Thu Tiền";
+						TitleApp = "Lập Phiếu Thu Tiền/ Trả Sách";
 						break;
 
 					case "Báo Cáo":
