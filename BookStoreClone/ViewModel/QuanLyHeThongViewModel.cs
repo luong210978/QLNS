@@ -71,6 +71,8 @@ namespace BookStoreClone.ViewModel
         public bool CNV { get => _cNV; set { _cNV = value; OnPropertyChanged(); } }
         private int _HeSoDonGia; 
         public int HeSoDonGia { get => _HeSoDonGia; set { _HeSoDonGia = value; OnPropertyChanged(); } }
+        private int _HeSoDonGiamuon;
+        public int HeSoDonGiamuon { get => _HeSoDonGiamuon; set { _HeSoDonGiamuon = value; OnPropertyChanged(); } }
         public int TienNoToiDa { get => _tienNoToiDa; set { _tienNoToiDa = value; OnPropertyChanged(); } }
 
         public int SoLuongSachTonToiThieuDeNhap { get => _soLuongSachTonToiThieuDeNhap; set { _soLuongSachTonToiThieuDeNhap = value; OnPropertyChanged(); } }
@@ -92,6 +94,7 @@ namespace BookStoreClone.ViewModel
             SoLuongSachTonToiThieuSauKhiBan = SelectedQuyDinh.SoLuongSachTonToiThieuSauKhiBan;
             TienNoToiDa = SelectedQuyDinh.TienNoToiDa;
             HeSoDonGia = Const.QuyDinh_HeSoDonGia;
+            HeSoDonGiamuon = Const.QuyDinh_HeSoDonGiaMuon;
             if (SelectedQuyDinh.DuocThuVuotSoTienKhachHangDangNo == true)
             {
                 CheckCo = true;
@@ -257,6 +260,7 @@ namespace BookStoreClone.ViewModel
                 SelectedQuyDinh.TienNoToiDa = TienNoToiDa;
                 SelectedQuyDinh.NgayCapNhat = DateTime.Now;
                 Const.QuyDinh_HeSoDonGia = HeSoDonGia;
+                Const.QuyDinh_HeSoDonGiaMuon = HeSoDonGiamuon;
                 DataProvider.Ins.DB.Database.ExecuteSqlCommand("SET IDENTITY_INSERT [dbo].[QuyDinh] ON");
                 DataProvider.Ins.DB.QuyDinhs.Add(SelectedQuyDinh);
                 DataProvider.Ins.DB.Database.ExecuteSqlCommand("SET IDENTITY_INSERT[dbo].[QuyDinh] OFF");

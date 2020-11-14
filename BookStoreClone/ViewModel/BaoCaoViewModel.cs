@@ -97,6 +97,8 @@ namespace BookStoreClone.ViewModel
                          _listHD = new ObservableCollection<HoaDon>(DataProvider.Ins.DB.HoaDons.Where(x => x.NgayBan.Value.Month == Thang && x.NgayBan.Value.Year == Nam));
                          _listPTT = new ObservableCollection<PhieuThuTien>(DataProvider.Ins.DB.PhieuThuTiens.Where(x => x.NgayThuTien.Value.Month == Thang && x.NgayThuTien.Value.Year == Nam));
                          _listCTHD = new ObservableCollection<CTHD>(DataProvider.Ins.DB.CTHDs.Where(x => x.HoaDon.NgayBan.Value.Month == Thang && x.HoaDon.NgayBan.Value.Year == Nam));
+                          //_listPN = new ObservableCollection<CTPhieuNhap>(DataProvider.Ins.DB.PhieuNhaps.Where((x => x.NgayNhap.Value.Month == Thang) && (x.NgayNhap.Value.Year == Nam));
+
                          _listCTPN = new ObservableCollection<CTPhieuNhap>(DataProvider.Ins.DB.CTPhieuNhaps.Where(x => x.PhieuNhap.NgayNhap.Value.Month == Thang && x.PhieuNhap.NgayNhap.Value.Year == Nam));
                          foreach(HoaDon a in _listHD)
                          {
