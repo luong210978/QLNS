@@ -38,7 +38,20 @@
                 Content="{materialDesign:PackIcon Kind=BookAccount}"
                 Style="{StaticResource MaterialDesignFloatingActionButton}"
                 ToolTip="Báo Cáo Tồn"
-                ToolTipService.Placement="Right" Click="Button_Click" />
+                ToolTipService.Placement="Right"  />
+            <Button
+                x:Name="xuat"
+                Width="60"
+                Height="60"
+                Margin="5,10,5,10"
+                VerticalAlignment="Center"
+                materialDesign:ButtonProgressAssist.IsIndicatorVisible="True"
+                materialDesign:ButtonProgressAssist.Value="-1"
+                Content="IN"
+                FontSize="40"
+                Style="{StaticResource MaterialDesignFloatingActionButton}"
+                ToolTip="In Báo Cáo"
+                ToolTipService.Placement="Right" Click="Button_xuat_Click" />
         </WrapPanel>
         <!--Baó Cáo Công Nợ -->
         <materialDesign:Card Margin="5"
@@ -97,6 +110,7 @@
         </materialDesign:Card>
         <!--Quản lí nhân viên-->
         <DockPanel
+            x:Name="pnlpnl"
             LastChildFill="True" Visibility="Visible">
             <StackPanel DockPanel.Dock="Top" Orientation="Horizontal">
 
@@ -166,7 +180,7 @@
                         <TextBox Margin="10,0,0,0" Width="50" Text="{Binding Nam,Mode=TwoWay}" BorderBrush="Black"></TextBox>
                     </StackPanel>
                 </materialDesign:ColorZone>
-
+                
             </StackPanel>
             <Grid Margin="5" x:Name="pnlBaoCao">
                 <Grid.ColumnDefinitions>

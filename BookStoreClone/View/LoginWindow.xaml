@@ -33,10 +33,10 @@
                         />-->
 
                     <Image 
-                        Source ="/BookStoreClone;component/Resources/img/2b48b29abd18febe3b1f92a85913ce39-simple-book-icon.png"
-                        IsEnabled="True"
-                        Height="260"
-                        Width="260"
+                        Source ="/BookStoreClone;component/Resources/img/ohno.gif"
+                        Height="230"
+                        Width="230"
+                        Margin="0,20,0,20"
                         
                     />
                      <!--<Image Height="260">

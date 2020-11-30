@@ -11,5 +11,25 @@ namespace BookStoreClone.View
         {
             InitializeComponent();
         }
+
+        private void InHoaDon_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+
+            try
+            {
+			
+				this.IsEnabled = false;
+                PrintDialog printDialog = new PrintDialog();
+                if (printDialog.ShowDialog() == true)
+                {
+                    printDialog.PrintVisual(pnlCTHD, "Hóa đơn");
+                }
+            }
+            finally
+            {
+                this.IsEnabled = true;
+            }
+
+        }
     }
 }

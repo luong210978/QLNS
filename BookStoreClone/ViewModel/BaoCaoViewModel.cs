@@ -68,15 +68,22 @@ namespace BookStoreClone.ViewModel
             VisibilityBaoCaoTon = Visibility.Collapsed;
             VisibilityBCCongNo = Visibility.Collapsed;
             DGBaoCaoTon = new DataGrid();
-            ShowBCCongNoCommand = new RelayCommand<Grid>((p) => { return true; }, (p) =>
+    
+            VisibilityBaoCaoTon = Visibility.Collapsed;
+            VisibilityBCCongNo = Visibility.Visible;
+            ShowBCCongNoCommand = new RelayCommand<Grid>((p) =>
+            {
+                //if (VisibilityBCCongNo != Visibility.Visible)
+                    return true;
+            }, (p) =>
             {
                 showdgNo();
                 VisibilityBaoCaoTon = Visibility.Collapsed;
                 VisibilityBCCongNo = Visibility.Visible;
                 p.Children.Clear();
                 p.Children.Add(DGBaoCaoNo);
-				//ICommand timKiemCommand = TimKiemCommand;
             });
+            
             ShowBCTonCommand = new RelayCommand<Grid>((p) => { return true; }, (p) =>
 
              {
@@ -106,8 +113,7 @@ namespace BookStoreClone.ViewModel
                     {
                         try
                         {
-                            //ListCTBaoCaoCongNo = new ObservableCollection<CTBaoCaoCongNo>(DataProvider.Ins.DB.CTBaoCaoCongNoes.Where(x => x.BaoCaoCongNo.Thang == Thang && x.BaoCaoCongNo.Nam == Nam));
-                            //ListCTBaoCaoTon = new ObservableCollection<CTBaoCaoTon>(DataProvider.Ins.DB.CTBaoCaoTons.Where(x => x.BaoCaoTon.Nam == Nam && x.BaoCaoTon.Thang == Thang));
+                            
                             _listHD = new ObservableCollection<HoaDon>(DataProvider.Ins.DB.HoaDons.Where(x => x.NgayBan.Value.Month == Thang && x.NgayBan.Value.Year == Nam));
                             _listPTT = new ObservableCollection<PhieuThuTien>(DataProvider.Ins.DB.PhieuThuTiens.Where(x => x.NgayThuTien.Value.Month == Thang && x.NgayThuTien.Value.Year == Nam));
                             _listCTHD = new ObservableCollection<CTHD>(DataProvider.Ins.DB.CTHDs.Where(x => x.HoaDon.NgayBan.Value.Month == Thang && x.HoaDon.NgayBan.Value.Year == Nam));
@@ -157,12 +163,11 @@ namespace BookStoreClone.ViewModel
                     {
                         try
                         {
-                            //ListCTBaoCaoCongNo = new ObservableCollection<CTBaoCaoCongNo>(DataProvider.Ins.DB.CTBaoCaoCongNoes.Where(x => x.BaoCaoCongNo.Thang == Thang && x.BaoCaoCongNo.Nam == Nam));
-                            //ListCTBaoCaoTon = new ObservableCollection<CTBaoCaoTon>(DataProvider.Ins.DB.CTBaoCaoTons.Where(x => x.BaoCaoTon.Nam == Nam && x.BaoCaoTon.Thang == Thang));
+                            
                             _listHD = new ObservableCollection<HoaDon>(DataProvider.Ins.DB.HoaDons.Where(x => x.NgayBan.Value.Month == Thang && x.NgayBan.Value.Year == Nam));
                             _listPTT = new ObservableCollection<PhieuThuTien>(DataProvider.Ins.DB.PhieuThuTiens.Where(x => x.NgayThuTien.Value.Month == Thang && x.NgayThuTien.Value.Year == Nam));
                             _listCTHD = new ObservableCollection<CTHD>(DataProvider.Ins.DB.CTHDs.Where(x => x.HoaDon.NgayBan.Value.Month == Thang && x.HoaDon.NgayBan.Value.Year == Nam));
-                            //_listPN = new ObservableCollection<CTPhieuNhap>(DataProvider.Ins.DB.PhieuNhaps.Where((x => x.NgayNhap.Value.Month == Thang) && (x.NgayNhap.Value.Year == Nam));
+                    
 
                             _listCTPN = new ObservableCollection<CTPhieuNhap>(DataProvider.Ins.DB.CTPhieuNhaps.Where(x => x.PhieuNhap.NgayNhap.Value.Month == Thang && x.PhieuNhap.NgayNhap.Value.Year == Nam));
                             foreach (HoaDon a in _listHD)
@@ -207,12 +212,9 @@ namespace BookStoreClone.ViewModel
                  {
                      try
                      {
-                         //ListCTBaoCaoCongNo = new ObservableCollection<CTBaoCaoCongNo>(DataProvider.Ins.DB.CTBaoCaoCongNoes.Where(x => x.BaoCaoCongNo.Thang == Thang && x.BaoCaoCongNo.Nam == Nam));
-                         //ListCTBaoCaoTon = new ObservableCollection<CTBaoCaoTon>(DataProvider.Ins.DB.CTBaoCaoTons.Where(x => x.BaoCaoTon.Nam == Nam && x.BaoCaoTon.Thang == Thang));
                          _listHD = new ObservableCollection<HoaDon>(DataProvider.Ins.DB.HoaDons.Where(x => x.NgayBan.Value.Month == Thang && x.NgayBan.Value.Year == Nam));
                          _listPTT = new ObservableCollection<PhieuThuTien>(DataProvider.Ins.DB.PhieuThuTiens.Where(x => x.NgayThuTien.Value.Month == Thang && x.NgayThuTien.Value.Year == Nam));
                          _listCTHD = new ObservableCollection<CTHD>(DataProvider.Ins.DB.CTHDs.Where(x => x.HoaDon.NgayBan.Value.Month == Thang && x.HoaDon.NgayBan.Value.Year == Nam));
-                          //_listPN = new ObservableCollection<CTPhieuNhap>(DataProvider.Ins.DB.PhieuNhaps.Where((x => x.NgayNhap.Value.Month == Thang) && (x.NgayNhap.Value.Year == Nam));
 
                          _listCTPN = new ObservableCollection<CTPhieuNhap>(DataProvider.Ins.DB.CTPhieuNhaps.Where(x => x.PhieuNhap.NgayNhap.Value.Month == Thang && x.PhieuNhap.NgayNhap.Value.Year == Nam));
                          foreach(HoaDon a in _listHD)

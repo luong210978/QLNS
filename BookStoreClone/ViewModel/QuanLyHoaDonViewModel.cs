@@ -1,4 +1,5 @@
 ﻿using BookStoreClone.Model;
+using BookStoreClone.View;
 using MaterialDesignThemes.Wpf;
 using System;
 using System.Collections.ObjectModel;
@@ -115,15 +116,21 @@ namespace BookStoreClone.ViewModel
         private Visibility _visibilitBtnChonKhachHang;
 
         private bool _btnThemMoiKhachHang;
+        private bool _iea;
+
         private bool _btnThemHoaDonMoi;
         public Visibility VisibilityChonKhachHang { get => _visibilityChonKhachHang; set { _visibilityChonKhachHang = value; OnPropertyChanged(); VisibilitBtnChonKhachHang = VisibilityChonKhachHang == Visibility.Visible ? Visibility.Collapsed : Visibility.Visible; } }
         public Visibility VisibilityChonSach { get => _visibilityChonSach; set { _visibilityChonSach = value; OnPropertyChanged(); VisibilitBtnChonSach = VisibilityChonSach == Visibility.Visible ? Visibility.Collapsed : Visibility.Visible; } }
         public Visibility VisibilityXemHoaDon { get => _visibilityXemHoaDon; set { _visibilityXemHoaDon = value; OnPropertyChanged(); } }
         public Visibility VisibilityTaoHoaDon { get => _visibilityTaoHoaDon; set { _visibilityTaoHoaDon = value; OnPropertyChanged(); BtnThemHoaDonMoi = VisibilitBtnChonSach == Visibility.Visible ? true : false; } }
-
+        public Visibility eniea { get; set; }
         public Visibility VisibilitBtnChonSach { get => _visibilitBtnChonSach; set { _visibilitBtnChonSach = value; OnPropertyChanged(); } }
         public Visibility VisibilitBtnChonKhachHang { get => _visibilitBtnChonKhachHang; set { _visibilitBtnChonKhachHang = value; OnPropertyChanged(); } }
-
+           
+        public bool iea { get => _iea; set { _iea = value; OnPropertyChanged();
+                if (iea == true)
+                       eniea = Visibility.Visible; 
+                else eniea = Visibility.Collapsed; } }
         public bool BtnThemMoiKhachHang { get => _btnThemMoiKhachHang; set { _btnThemMoiKhachHang = value; OnPropertyChanged(); } }
         public bool BtnThemHoaDonMoi { get => _btnThemHoaDonMoi; set { _btnThemHoaDonMoi = value; OnPropertyChanged(); } }
 
@@ -153,6 +160,7 @@ namespace BookStoreClone.ViewModel
                 VisibilityTaoHoaDon = Visibility.Collapsed;
                 VisibilityXemHoaDon = Visibility.Visible;
                 VisibilityChonKhachHang = Visibility.Collapsed;
+                iea = true;
                 BtnThemHoaDonMoi = false;
             }
             if (n == 2)
@@ -172,7 +180,6 @@ namespace BookStoreClone.ViewModel
         {
             DateTimeStart = new DateTime(2020, 01, 01, 01, 01, 01);
             DateTimeEnd = System.DateTime.Now;
-
             TextTimKiemHoaDon = "";
             //ListHoaDon = new ObservableCollection<HoaDon>(DataProvider.Ins.DB.HoaDons);
 
@@ -286,33 +293,14 @@ namespace BookStoreClone.ViewModel
                 QuanLyKhachHangVM = p.DataContext as QuanLyKhachHangViewModel;
             });
 
-            #endregion Chọn khách hàng done
+			#endregion Chọn khách hàng done
 
-            #region Hóa đơn
-        //    InHoaDonCommand = new RelayCommand<Button>(
-        //       (p) => { return false; },(p)=> 
-        //       {
-        //           {
-        //               PrintDialog pDlg = new PrintDialog();
-					   //PrintDocument pDoc = new PrintDocument();
-        //               pDoc.DocumentName = "Print Document";
-        //               pDlg.Document = pDoc;
-        //               pDlg.AllowSelection = true;
-        //               pDlg.AllowSomePages = true;
-        //               if (pDlg.ShowDialog() == DialogResult.OK)
-        //               {
-        //                   pDoc.Print();
-        //               }
-        //               else
-        //               {
-        //                   MessageBox.Show("Đã hủy in");
-        //               }
-        //           }
-        //       });
-           LuuHoaDonCommand = new RelayCommand<Button>(
+			#region Hóa đơn
+			
+			LuuHoaDonCommand = new RelayCommand<Button>(
                 (p) =>
                 {
-
+                    //QuanLyHoaDonUC.pnlhoadon
                     if (ListCTHD_BanSach.Count == 0) return false;
                     p.IsEnabled = false;
 

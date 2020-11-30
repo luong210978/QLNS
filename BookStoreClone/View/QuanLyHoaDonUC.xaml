@@ -353,6 +353,7 @@
         <materialDesign:Card
             Width="620"
             Margin="5"
+            Name="pnlhoadon"
             DockPanel.Dock="Right"
             Tag="{Binding IDSach, UpdateSourceTrigger=PropertyChanged}"
             Visibility="{Binding VisibilityTaoHoaDon}">
@@ -573,10 +574,10 @@
                                     CommandParameter="{Binding ElementName=btnLuuHoaDon}"
                                     DockPanel.Dock="Bottom"
                                     Style="{StaticResource MaterialDesignRaisedDarkButton}"
-                                    ToolTip="In Hóa Đơn" VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                                    ToolTip="In Hóa Đơn" VerticalAlignment="Bottom" HorizontalAlignment="Right" RenderTransformOrigin="0.503,0.5" >
                                     Thanh toán
                                 </Button>
-                               
+
                                 <StackPanel />
                             </DockPanel>
                         </DockPanel>
@@ -667,12 +668,12 @@
             </DockPanel>
         </materialDesign:Card>
         <materialDesign:Card
-            Width="426"
-            Margin="5"
+            Width="500"
+            Margin="0,0,0,0"
             DockPanel.Dock="Right"
             Tag="{Binding IDSach, UpdateSourceTrigger=PropertyChanged}"
             Visibility="{Binding VisibilityXemHoaDon}">
-            <DockPanel Width="426" LastChildFill="True">
+            <DockPanel Width="500" LastChildFill="True" x:Name="pnlCTHD" Margin="0,0,0,0" HorizontalAlignment="Left">
                 <TextBlock
                     Margin="24,0,0,0"
                     DockPanel.Dock="Top"
@@ -802,9 +803,9 @@
                         CanUserSortColumns="True"
                         DockPanel.Dock="Top"
                         HeadersVisibility="All"
-                        HorizontalScrollBarVisibility="Auto"
+                       
                         IsReadOnly="True"
-                        ItemsSource="{Binding SelectedItem.CTHDs, ElementName=dataHoaDon}">
+                        ItemsSource="{Binding SelectedItem.CTHDs, ElementName=dataHoaDon}" VerticalScrollBarVisibility="Disabled" ScrollViewer.CanContentScroll="True" HorizontalScrollBarVisibility="Disabled">
 
                         <DataGrid.Columns>
 
@@ -827,8 +828,9 @@
                                 IsReadOnly="true" />
                         </DataGrid.Columns>
                     </DataGrid>
+                    <TextBlock DockPanel.Dock="Bottom" Margin="0,0,0,0" Text="Lưu ý trả sách trong vòng 30 ngày sau khi mượn, quá hạn mỗi tháng trả thêm 10% giá trị sách" Height="52" Width="506"></TextBlock>
 
-                    <DockPanel Margin="40" DockPanel.Dock="Bottom">
+                    <DockPanel Margin="40,0,0,0" DockPanel.Dock="Bottom" Height="176" Width="397">
                         <DockPanel DockPanel.Dock="Right">
                             <StackPanel DockPanel.Dock="Top" Orientation="Horizontal">
                                 <TextBlock
@@ -838,13 +840,25 @@
                                 <TextBlock FontSize="15" Text="{Binding SelectedItem.TongTien, ElementName=dataHoaDon}" />
                             </StackPanel>
                             <StackPanel DockPanel.Dock="Top" Orientation="Horizontal">
-                                <TextBlock FontSize="15" Text="Số tiền thanh toán: " />
+                                <TextBlock FontSize="15" ><Run Text="Số tiền thanh "/><Run Text="toán: "/></TextBlock>
                                 <TextBlock FontSize="15" Text="{Binding SelectedItem.SoTienTra, ElementName=dataHoaDon}" />
                             </StackPanel>
                         </DockPanel>
-                        <Grid />
+                        <Grid >
+                            <Button
+                                            x:Name="InHoaDon"
+                                            Width="54"
+                                            IsEnabled="{Binding iea,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}"
+                                            Visibility="{Binding eniea,Mode=TwoWay}"
+                                            CommandParameter="{Binding ElementName=btnLuuHoaDon}"
+                                            Style="{StaticResource MaterialDesignRaisedDarkButton}"
+                                            ToolTip="In Hóa Đơn" VerticalAlignment="Top" HorizontalAlignment="Right" RenderTransformOrigin="2.437,0.337" Click="InHoaDon_Click" Content="In" Margin="0,10,149.2,0"/>
+                        </Grid>
                     </DockPanel>
+
                 </DockPanel>
+                                   
+
             </DockPanel>
         </materialDesign:Card>
         <DockPanel LastChildFill="True" Visibility="Visible">

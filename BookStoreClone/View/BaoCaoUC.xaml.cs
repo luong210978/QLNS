@@ -25,12 +25,26 @@ namespace BookStoreClone.View
             InitializeComponent();
         }
 
-		private void Button_Click(object sender, RoutedEventArgs e)
+		private void Button_xuat_Click(object sender, RoutedEventArgs e)
 		{
+            try
+            {
 
-		}
+                this.IsEnabled = false;
+                PrintDialog printDialog = new PrintDialog();
+                if (printDialog.ShowDialog() == true)
+                {
+                    printDialog.PrintVisual(pnlpnl, "Báo Cáo");
+                }
+            }
+            finally
+            {
+                this.IsEnabled = true;
+            }
 
-		private void ComboBox_CanExecute(object sender, CanExecuteRoutedEventArgs e)
+        }
+
+        private void ComboBox_CanExecute(object sender, CanExecuteRoutedEventArgs e)
 		{
 
 		}

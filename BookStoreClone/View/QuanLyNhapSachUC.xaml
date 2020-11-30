@@ -149,7 +149,7 @@
             DockPanel.Dock="Right"
             Tag="{Binding IDSach, UpdateSourceTrigger=PropertyChanged}"
             Visibility="{Binding VisibilityTaoMoi}">
-            <DockPanel Width="426" LastChildFill="True">
+            <DockPanel Width="426" LastChildFill="True" Name="pnllnhapssach">
                 <TextBlock
                     Margin="24,0,0,0"
                     DockPanel.Dock="Top"
@@ -254,7 +254,7 @@
                                     CommandParameter="{Binding ElementName=btnNhapKho}"
                                     DockPanel.Dock="Right"
                                     Style="{StaticResource MaterialDesignRaisedDarkButton}"
-                                    ToolTip="Lưu phiếu nhập sách">
+                                    ToolTip="Lưu phiếu nhập sách" Click="btnNhapKho_Click">
                                     Nhập kho
                                 </Button>
                                 <StackPanel />
@@ -336,7 +336,7 @@
             
             Tag="{Binding IDSach, UpdateSourceTrigger=PropertyChanged}"
             >
-                <DockPanel Width="426" LastChildFill="True">
+                <DockPanel Width="426" LastChildFill="True" Name="pnlchitiet">
                     <TextBlock
                     Margin="24,0,0,0"
                     DockPanel.Dock="Top"
@@ -454,6 +454,9 @@
                                     Text="Thành tiền: " />
                                     <TextBlock FontSize="15" Text="{Binding SelectedPhieuNhap.GiaTriPhieuNhap}" />
                                     <TextBlock FontSize="15" Text="đ" />
+                                    <Button
+                                        Content="IN" Click="Button1_Click"
+                            ></Button>
                                 </StackPanel>
 
 
