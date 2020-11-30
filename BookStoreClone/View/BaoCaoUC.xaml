@@ -48,24 +48,24 @@
                              >
             <DockPanel Margin="10">
                 <StackPanel Orientation="Horizontal"  HorizontalAlignment="Center"  DockPanel.Dock="Top" Margin="0,90,0,0">
-                    <TextBlock Text="Tổng số tiền khách hàng nợ trong tháng: " ></TextBlock>
-                    <TextBlock Text="{Binding TongSoNo,Mode=OneWay,UpdateSourceTrigger=PropertyChanged}"></TextBlock>
-                    <TextBlock Text=" VNĐ" ></TextBlock>
+                    <TextBlock Text="Tổng số tiền khách hàng nợ trong tháng: " FontSize="15"></TextBlock>
+                    <TextBlock Text="{Binding TongSoNo,Mode=OneWay,UpdateSourceTrigger=PropertyChanged}" FontSize="15" ></TextBlock>
+                    <TextBlock Text=" VNĐ" FontSize="15"></TextBlock>
                 </StackPanel>
 
                 <ProgressBar DockPanel.Dock="Top" 
                     Style="{StaticResource MaterialDesignCircularProgressBar}"
                     Value="35"
-                    IsIndeterminate="True" Height="Auto" Margin="0,20,0,290" Width="200" />
+                    IsIndeterminate="True" Height="Auto" Margin="103,20,212.6,290" Width="Auto" />
                 <StackPanel Orientation="Horizontal" Margin="10" HorizontalAlignment="Center"  DockPanel.Dock="Top">
-                    <TextBlock Text="Tổng số tiền khách hàng trả trong tháng: " ></TextBlock>
-                    <TextBlock Text="{Binding TongSoTra,Mode=OneWay,UpdateSourceTrigger=PropertyChanged}"></TextBlock>
-                    <TextBlock Text=" VNĐ" ></TextBlock>
+                    <TextBlock Text="Tổng số tiền khách hàng trả trong tháng: " FontSize="15" ></TextBlock>
+                    <TextBlock Text="{Binding TongSoTra,Mode=OneWay,UpdateSourceTrigger=PropertyChanged}" FontSize="15"></TextBlock>
+                    <TextBlock Text=" VNĐ" FontSize="15"></TextBlock>
                 </StackPanel>
                 <ProgressBar DockPanel.Dock="Top"
                     Style="{StaticResource MaterialDesignCircularProgressBar}"
                     Value="35"
-                    IsIndeterminate="True" Height="Auto" Margin="0,20,0,150" Width="200" />
+                    IsIndeterminate="True" Height="Auto" Margin="103,20,212.6,150" Width="Auto" />
             </DockPanel>
         </materialDesign:Card >
         <!--Báo Cáo Tồn-->
@@ -74,24 +74,25 @@
                              x:Name="pnlBaoCaoTon" >
             <DockPanel Margin="10">
                 <StackPanel Orientation="Horizontal"  HorizontalAlignment="Center"  DockPanel.Dock="Top" Margin="0,90,0,0">
-                    <TextBlock Text="Tổng số sách nhập trong tháng: " ></TextBlock>
-                    <TextBlock Text="{Binding TongSoSachNhap,Mode=OneWay,UpdateSourceTrigger=PropertyChanged}"></TextBlock>
-                    <TextBlock Text=" quyển" ></TextBlock>
+                    <TextBlock Text="Tổng số sách nhập trong tháng: " FontSize="15"></TextBlock>
+                    <TextBlock Text="{Binding TongSoSachNhap,Mode=OneWay,UpdateSourceTrigger=PropertyChanged}" FontSize="15"></TextBlock>
+                    <TextBlock Text=" quyển" FontSize="15"></TextBlock>
                 </StackPanel>
 
                 <ProgressBar DockPanel.Dock="Top" 
                     Style="{StaticResource MaterialDesignCircularProgressBar}"
                     Value="35"
-                    IsIndeterminate="True" Height="Auto" Margin="0,20,0,290" Width="200" />
+                    IsIndeterminate="True" Height="4" Margin="103,20,216.6,290" Width="Auto" />
                 <StackPanel Orientation="Horizontal" Margin="10" HorizontalAlignment="Center"  DockPanel.Dock="Top">
-                    <TextBlock Text="Tổng số sách bán được trong tháng :" ></TextBlock>
-                    <TextBlock Text="{Binding TongSoSachBan,Mode=OneWay,UpdateSourceTrigger=PropertyChanged}"></TextBlock>
-                    <TextBlock Text=" quyển" ></TextBlock>
+                    <TextBlock Text="Tổng số sách bán được trong tháng :" Height="25" FontSize="15"/>
+                    <TextBlock Text="{Binding TongSoSachBan, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" FontSize="15"/>
+                    <TextBlock Text=" quyển" FontSize="15" />
                 </StackPanel>
                 <ProgressBar DockPanel.Dock="Top"
                     Style="{StaticResource MaterialDesignCircularProgressBar}"
                     Value="35"
-                    IsIndeterminate="True" Height="Auto" Margin="0,20,0,150" Width="200" />
+                    
+                    IsIndeterminate="True" Height="Auto" Margin="103,20,216.6,150" Width="Auto" />
             </DockPanel>
         </materialDesign:Card>
         <!--Quản lí nhân viên-->
@@ -115,7 +116,9 @@
                             <materialDesign:PackIcon Kind="BookSearch" Opacity=".56" />
                         </Button>
                         <TextBlock Margin="10,5,0,0">Tháng:</TextBlock>
-                        <ComboBox Margin="10,0,0,0" Width="060" Text="{Binding Thang,Mode=OneWayToSource}" BorderBrush="Black"  VerticalAlignment="Center" HorizontalAlignment="Center" SelectedIndex="0" HorizontalContentAlignment="Center">
+                        <ComboBox Margin="10,0,0,0" Width="060" Text="{Binding Thang,Mode=OneWayToSource}" BorderBrush="Black"  VerticalAlignment="Center" HorizontalAlignment="Center" SelectedIndex="0" HorizontalContentAlignment="Center" SelectionChanged="ComboBox_SelectionChanged" >
+
+
                             <ComboBoxItem HorizontalContentAlignment="Center">
                                 1
                             </ComboBoxItem>
@@ -153,6 +156,11 @@
                             <ComboBoxItem HorizontalContentAlignment="Center">
                                 12
                             </ComboBoxItem>
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="SelectionChanged">
+                                    <i:InvokeCommandAction Command="{Binding datechange}" CommandParameter="{Binding ElementName=pnlBaoCao}" />
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
                         </ComboBox>
                         <TextBlock Margin="10,5,0,0">Năm:</TextBlock>
                         <TextBox Margin="10,0,0,0" Width="50" Text="{Binding Nam,Mode=TwoWay}" BorderBrush="Black"></TextBox>
@@ -161,6 +169,11 @@
 
             </StackPanel>
             <Grid Margin="5" x:Name="pnlBaoCao">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="0*"/>
+                    <ColumnDefinition Width="0*"/>
+                </Grid.ColumnDefinitions>
 
             </Grid>
         </DockPanel>

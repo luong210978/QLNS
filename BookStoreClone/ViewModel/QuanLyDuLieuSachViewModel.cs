@@ -417,7 +417,7 @@
 				if (SelectedNhaXB == null) return false;
 				if (TextTrangThai != "Cập nhật sách")
 				{
-					if (TextTenSach != null && TextTenSach != "" && ListSach.Where(x => x.TenSach == TextTenSach).ToList().Count == 0)
+					if ((TextTenSach != null) && (TextTenSach != "" )&& (ListSach.Where(x => x.TenSach == TextTenSach).ToList().Count == 0))
 					{
 						p.IsEnabled = true;
 						return true;
@@ -425,7 +425,7 @@
 				}
 				else
 				{
-					if (TextTenSach != null && TextTenSach != "")
+					if ((TextTenSach != null) && (TextTenSach != ""))
 					{
 						p.IsEnabled = true;
 						return true;
@@ -498,12 +498,12 @@
 
 					sach.NhaXuatBan = DataProvider.Ins.DB.NhaXuatBans.Where(x => x.MaNXB == SelectedNhaXB.MaNXB).First();
 
-					while (true)
+					//while (true)
 						try
 						{
 							sach.AnhBia = "book" + sach.MaSach.ToString() + "_" + random.Next(0, 100000).ToString() + ((LinkAnhBia.Contains(".jpg")) ? ".jpg" : ".png").ToString();
 							File.Copy(LinkAnhBia, _localLink + @"Resources\img\" + sach.AnhBia, true);
-							break;
+							//break;
 						}
 						catch { }
 

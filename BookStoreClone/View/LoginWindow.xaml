@@ -22,26 +22,28 @@
                     <StackPanel
                         Width="350"
                         Height="524"          
-                        Background="#263228">
-
-                    <materialDesign:PackIcon 
+                        Background="#ffff">
+                    
+                    <!--<materialDesign:PackIcon 
                         Kind="BookMinus" 
                         VerticalAlignment="Center"
                         Height="250"
                         Width="260"
                         HorizontalAlignment="Center"
-                        />
+                        />-->
 
-                    <!--<Image 
-                        Source ="/thuvienlogindemo;component/Resources/Images/2b48b29abd18febe3b1f92a85913ce39-simple-book-icon.png"
+                    <Image 
+                        Source ="/BookStoreClone;component/Resources/img/2b48b29abd18febe3b1f92a85913ce39-simple-book-icon.png"
                         IsEnabled="True"
                         Height="260"
                         Width="260"
                         
-                    />-->
-                        <Image Height="10">
+                    />
+                     <!--<Image Height="260">
 
-                        </Image>
+                       --><!--<Image Height="10">--><!--
+
+                        </Image>-->
                         <TextBlock
                     Text="Đăng nhập vào thư viện"
                         FontSize="20"
@@ -57,8 +59,8 @@
                             
                             VerticalAlignment="Center"
                             materialDesign:HintAssist.Hint="Tên đăng nhập"
-                            materialDesign:TextFieldAssist.UnderlineBrush="White"
-                            Foreground="White"
+                            materialDesign:TextFieldAssist.UnderlineBrush="Blue"
+                            Foreground="Blue"
                             Text="{Binding UserName}"    
                                 
                             Style="{StaticResource MaterialDesignFloatingHintTextBox}"
@@ -70,10 +72,10 @@
                             Width="250"
                             Height="45"
                             Margin="10"
-                            materialDesign:HintAssist.Foreground="Green"
+                            materialDesign:HintAssist.Foreground="Blue"
                             materialDesign:HintAssist.Hint="Mật khẩu"
-                            materialDesign:TextFieldAssist.UnderlineBrush="White"
-                            Foreground="White"
+                            materialDesign:TextFieldAssist.UnderlineBrush="Blue"
+                            Foreground="Blue"
                             Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" >
                             <i:Interaction.Triggers>
                                 <i:EventTrigger EventName="PasswordChanged">
@@ -87,6 +89,7 @@
                             HorizontalAlignment="Right"
                             Background="Transparent"
                             BorderBrush="Transparent"
+                            Foreground="Blue"
                             Command="{Binding BoQuaDangNhapCommand}"
                             CommandParameter="{Binding ElementName=Loginwd}" Content="Bỏ qua đăng nhập"/>
                         <Button

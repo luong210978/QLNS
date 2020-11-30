@@ -29,5 +29,15 @@ namespace BookStoreClone.View
 		{
 
 		}
+
+		private void ComboBox_CanExecute(object sender, CanExecuteRoutedEventArgs e)
+		{
+
+		}
+
+		private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+		{
+
+		}
 	}
 }

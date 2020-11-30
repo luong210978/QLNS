@@ -344,7 +344,7 @@ namespace BookStoreClone.ViewModel
                                 hd.TrangThai ="Chưa trả";
 							}                                
                             hoaDon.SoSachMuon = TongSachMuon;
-                            DataProvider.Ins.DB.Database.ExecuteSqlCommand("SET IDENTITY_INSERT [dbo].[HoaDon] ON");
+                          DataProvider.Ins.DB.Database.ExecuteSqlCommand("SET IDENTITY_INSERT [dbo].[HoaDon] ON");
                             DataProvider.Ins.DB.HoaDons.Add(hoaDon);
                             DataProvider.Ins.DB.Database.ExecuteSqlCommand("SET IDENTITY_INSERT [dbo].[HoaDon] OFF");
                             SelectedKhachHang.SoTienNo += TongGiaBan - int.Parse(SoTienTra);
